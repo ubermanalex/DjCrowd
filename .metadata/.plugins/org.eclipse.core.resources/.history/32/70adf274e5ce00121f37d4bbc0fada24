@@ -13,37 +13,26 @@ javascript put div at h/2+??; w/2+??
 	<script src="functions.js"></script>
 	<meta name="viewpoint" content="width=device-width,initial-scale=1,maximum-scale=1"/>
 </head>
-
-
 <body>
-	
 <div data-role="page" id="index">
-    
-    <header>
     <div data-theme="a" data-role="header">
         <h3>
-            DjCrowd
+            Scale Your Friends
         </h3>
     </div>
-    </header>
-    
-    
-    <div data-role="content" id="content">
-      	<h2>
-            Willkommen bei DjCrowd !
-        </h2>
-        <div data-role="fieldcontain">
-            <label for="textinput1">
-                Nutzername
-            </label>
-            <input name="" id="textinput1" placeholder="Hier Nutzernamen eingeben"
-            value="" type="text">
-        </div>
-        <input value="Get the Party started !" type="submit">
-    </div>
-    
-    	
-    <footer data-role="footer" data-position="fixed">
+    	<div data-role="content" id="ajaxtest">
+      	 <div align="center"><b>Herzlich Willkommen bei</b>
+      	 <h2>Scale Your Friends!</h2></div>
+      	 <div> 	
+      	<br><p style="text-align:center"><b>Möchtest Du online oder offline spielen?</p></b><br>
+      	 <a data-role="button" data-transition="slide" href="online.html">
+            	online
+        	<a data-role="button" data-transition="slide" onclick="offlineajax()">
+            	offline
+        	</a>
+        	</div>
+    	</div>
+        <footer data-role="footer" data-position="fixed">
     	<nav data-role="navbar">
     		<ul>
     			<li>

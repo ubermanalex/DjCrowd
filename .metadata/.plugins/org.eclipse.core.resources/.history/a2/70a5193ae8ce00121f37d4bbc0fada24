@@ -29,7 +29,7 @@ javascript put div at h/2+??; w/2+??
     
     
     <div data-role="content" id="content">
-      	<h2>
+      	  <h2>
             Willkommen bei DjCrowd !
         </h2>
         <div data-role="fieldcontain">
