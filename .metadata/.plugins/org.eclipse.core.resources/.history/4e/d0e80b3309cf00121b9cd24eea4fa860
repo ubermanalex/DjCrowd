@@ -1,0 +1,14 @@
+<html>
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+
+<ul data-role="listview" data-divider-theme="b" data-inset="true">
+	<li data-role="list-divider" role="heading">
+		Crowdlist
+	</li>
+	<li data-theme="c">
+		<a href="#page1" data-transition="slide"> Lied <span class="ui-li-count"> 50 </span> </a>
+	</li>
+</ul>
+
+</html>

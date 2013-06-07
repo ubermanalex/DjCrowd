@@ -1,0 +1,15 @@
+/** checks input **/
+
+function checkInputLength(String, Integer) {
+	var length = (String.length);
+	return (length <= Integer);
+}
+
+function check(String, Integer) {
+	alert("yo");
+	/*if (checkInputLength(String, Integer)) {
+		alert("Zeichen auf "+Integer+"" begrenzt!");
+		usernameinput.value = String.substr(0, Integer);
+	}*/
+	//if (String.length
+}

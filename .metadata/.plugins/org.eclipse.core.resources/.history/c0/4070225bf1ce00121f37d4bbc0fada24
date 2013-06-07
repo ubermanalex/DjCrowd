@@ -1,0 +1,13 @@
+/** checks input **/
+
+function checkInputLength(String, Integer) {
+	var length = (String.length);
+	return (length <= Integer && length > 0);
+}
+
+function check(String, Integer,id) {
+	if (checkInputLength(String, Integer)) {
+		alert("Zeichen auf "+Integer+"" begrenzt!");
+		id.value = String.substr(0, Integer);
+	}
+}

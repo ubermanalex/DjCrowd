@@ -1,0 +1,12 @@
+function checkInputLength (String,Integer) {
+var length = (String.length);
+var h = (length <= Integer);
+return h;
+}
+
+function check(String, Integer) {
+	if checkInputLength(String, Integer) {
+		alert("Zeichen auf 30 begrenzt!");
+		eingabe.value = String.substr(0, Integer);
+	}
+}
