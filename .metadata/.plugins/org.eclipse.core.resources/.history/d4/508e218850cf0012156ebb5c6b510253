@@ -13,18 +13,14 @@ function loadhome(username) {
 	/*TEST:*/var users = new Array();
 	 users.push('Heide');
 	 users.push('Frauberg');
-	 //alert(users);/*:TEST*/
+	 alert(users);/*:TEST*/
 	if (username == "") {
 		alert("Bitte einen Nutzernamen eingeben.");
 	} else if (users.indexOf(username) != -1) {
 		alert("Nutzername bereits vergeben.");
 	} else {
-		//alert("yo");
-		/*$("#content").load("home.html", function() {
-		});*/
-		$.get('home.html', function (response){
-			//var myHtml = $('#homecontent', response);
-			$('#content').html(response);
+		alert("yo");
+		$("#content").load("home.html", function() {
 		});
 	}
 }

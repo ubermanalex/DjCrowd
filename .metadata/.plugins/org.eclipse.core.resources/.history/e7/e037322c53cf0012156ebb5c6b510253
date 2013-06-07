@@ -20,11 +20,7 @@ function loadhome(username) {
 		alert("Nutzername bereits vergeben.");
 	} else {
 		//alert("yo");
-		/*$("#content").load("home.html", function() {
-		});*/
-		$.get('home.html', function (response){
-			//var myHtml = $('#homecontent', response);
-			$('#content').html(response);
+		$("#content").load("home.html", function() {
 		});
 	}
 }

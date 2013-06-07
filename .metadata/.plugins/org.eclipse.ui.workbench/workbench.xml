@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="51" version="2.0">
+<workbench progressCount="50" version="2.0">
 <workbenchAdvisor/>
 <window height="728" width="1200" x="75" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -38,17 +38,17 @@
 </folder>
 </info>
 </editorArea>
-<editor id="com.aptana.editor.html" name="index.html" partName="index.html" path="C:/Users/Alex/Documents/GitHub/DjCrowd/Applikation/index.html" title="index.html" tooltip="Applikation/index.html" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="com.aptana.editor.html" name="index.html" partName="index.html" path="C:/Users/Alex/Documents/GitHub/DjCrowd/Applikation/index.html" title="index.html" tooltip="Applikation/index.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Applikation/index.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="158" selectionOffset="370" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1584" selectionTopPixel="336"/>
 </editor>
 <editor id="com.aptana.editor.js" name="functions.js" partName="functions.js" path="C:/Users/Alex/Documents/GitHub/DjCrowd/Applikation/functions.js" title="functions.js" tooltip="Applikation/functions.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Applikation/functions.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="534" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="642" selectionTopPixel="120"/>
 </editor>
-<editor activePart="true" focus="true" id="com.aptana.editor.html" name="home.html" partName="home.html" path="C:/Users/Alex/Documents/GitHub/DjCrowd/Applikation/home.html" title="home.html" tooltip="Applikation/home.html" workbook="DefaultEditorWorkbook">
+<editor id="com.aptana.editor.html" name="home.html" partName="home.html" path="C:/Users/Alex/Documents/GitHub/DjCrowd/Applikation/home.html" title="home.html" tooltip="Applikation/home.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Applikation/home.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="109" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="258" selectionTopPixel="0"/>
 </editor>
 <editor id="com.aptana.editor.css" name="style.css" partName="style.css" path="C:/Users/Alex/Documents/GitHub/DjCrowd/Applikation/style.css" title="style.css" tooltip="Applikation/style.css" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Applikation/style.css"/>
@@ -68,9 +68,6 @@
 <view id="com.aptana.samples.ui.SamplesView" partName="Samples"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings (1 item)"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -203,85 +200,10 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Applikation/utility.js"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/Applikation/home.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.css" path="/Applikation/style.css"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/Applikation/index.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Applikation/functions.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/Applikation/index.html"/>
 </editors>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="403" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="407" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="411" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="415" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="419" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="423" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="427" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="468" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="435" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="439" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="443" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="447" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="451" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="455" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="459" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="463" y="0"/>
-</item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="756" y="0"/>
-</item>
-<item historyLabel="functions.js" index="1">
-<position/>
-</item>
-<item historyLabel="home.html" index="3">
-<position info="not_deleted" x="552" y="0"/>
-</item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1642" y="0"/>
-</item>
-<item historyLabel="functions.js" index="1">
-<position/>
-</item>
-<item historyLabel="home.html" index="3">
-<position info="not_deleted" x="552" y="0"/>
-</item>
-<item historyLabel="style.css" index="4">
-<position info="not_deleted" x="21" y="0"/>
-</item>
-<item historyLabel="home.html" index="3">
-<position/>
-</item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1376" y="0"/>
-</item>
-<item historyLabel="functions.js" index="1">
-<position/>
-</item>
 <item historyLabel="functions.js" index="1">
 <position info="not_deleted" x="315" y="0"/>
 </item>
@@ -351,8 +273,86 @@
 <item historyLabel="index.html" index="0">
 <position info="not_deleted" x="370" y="158"/>
 </item>
-<item active="true" historyLabel="home.html" index="3">
+<item historyLabel="home.html" index="3">
 <position/>
+</item>
+<item historyLabel="index.html" index="5">
+<position/>
+</item>
+<item historyLabel="home.html" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="functions.js" index="6">
+<position info="not_deleted" x="489" y="51"/>
+</item>
+<item historyLabel="home.html" index="3">
+<position info="not_deleted" x="8" y="0"/>
+</item>
+<item historyLabel="functions.js" index="6">
+<position info="not_deleted" x="489" y="51"/>
+</item>
+<item historyLabel="functions.js" index="6">
+<position info="not_deleted" x="583" y="0"/>
+</item>
+<item historyLabel="functions.js" index="6">
+<position info="not_deleted" x="667" y="0"/>
+</item>
+<item historyLabel="functions.js" index="6">
+<position info="not_deleted" x="650" y="0"/>
+</item>
+<item historyLabel="home.html" index="3">
+<position info="not_deleted" x="467" y="0"/>
+</item>
+<item historyLabel="home.html" index="3">
+<position info="not_deleted" x="752" y="0"/>
+</item>
+<item historyLabel="functions.js" index="6">
+<position info="not_deleted" x="620" y="0"/>
+</item>
+<item historyLabel="index.html" index="5">
+<position/>
+</item>
+<item historyLabel="home.html" index="3">
+<position info="not_deleted" x="752" y="0"/>
+</item>
+<item historyLabel="home.html" index="3">
+<position info="not_deleted" x="463" y="0"/>
+</item>
+<item historyLabel="functions.js" index="6">
+<position info="not_deleted" x="646" y="0"/>
+</item>
+<item historyLabel="home.html" index="3">
+<position info="not_deleted" x="763" y="0"/>
+</item>
+<item historyLabel="functions.js" index="6">
+<position info="not_deleted" x="646" y="0"/>
+</item>
+<item historyLabel="index.html" index="5">
+<position info="not_deleted" x="1469" y="0"/>
+</item>
+<item historyLabel="functions.js" index="6">
+<position info="not_deleted" x="542" y="0"/>
+</item>
+<item historyLabel="home.html" index="3">
+<position info="not_deleted" x="15" y="0"/>
+</item>
+<item historyLabel="index.html" index="5">
+<position info="not_deleted" x="271" y="254"/>
+</item>
+<item historyLabel="functions.js" index="6">
+<position info="not_deleted" x="642" y="0"/>
+</item>
+<item historyLabel="home.html" index="3">
+<position info="not_deleted" x="15" y="0"/>
+</item>
+<item historyLabel="index.html" index="7">
+<position info="not_deleted" x="271" y="254"/>
+</item>
+<item historyLabel="home.html" index="3">
+<position info="not_deleted" x="258" y="0"/>
+</item>
+<item active="true" historyLabel="index.html" index="7">
+<position info="not_deleted" x="271" y="254"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

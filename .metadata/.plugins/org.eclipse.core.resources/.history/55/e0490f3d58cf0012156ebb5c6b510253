@@ -22,10 +22,10 @@ function loadhome(username) {
 		//alert("yo");
 		/*$("#content").load("home.html", function() {
 		});*/
-		$.get('home.html', function (response){
-			//var myHtml = $('#homecontent', response);
-			$('#content').html(response);
-		});
+		/*$.get('home.html', function (response){
+			var myHtml = $('#homecontent', response);
+			$('#content').html(myHtml);
+		});*/
 	}
 }
 

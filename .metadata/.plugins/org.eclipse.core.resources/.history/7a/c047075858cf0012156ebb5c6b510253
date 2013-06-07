@@ -24,7 +24,7 @@ function loadhome(username) {
 		});*/
 		$.get('home.html', function (response){
 			//var myHtml = $('#homecontent', response);
-			$('#content').html(response);
+			$('.content').html(myHtml);
 		});
 	}
 }

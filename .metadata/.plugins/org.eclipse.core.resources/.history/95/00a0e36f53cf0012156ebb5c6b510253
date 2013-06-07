@@ -23,8 +23,8 @@ function loadhome(username) {
 		/*$("#content").load("home.html", function() {
 		});*/
 		$.get('home.html', function (response){
-			//var myHtml = $('#homecontent', response);
-			$('#content').html(response);
+			var myHtml = $('#selector', response);
+			$("#content").html(myHtml);
 		});
 	}
 }
