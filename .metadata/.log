@@ -7457,3 +7457,575 @@ java.io.FileNotFoundException: C:\Users\Alex\Documents\GitHub\DjCrowd\.metadata\
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2013-06-08 02:53:35.521 -----------------------------------------------
+eclipse.buildId=3.4.0.201304151603
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.jobs 2 2 2013-06-08 02:54:22.158
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.internal.DefaultAnalyticsEventHandler$1
+
+!ENTRY org.eclipse.core.jobs 2 2 2013-06-08 02:54:22.208
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.internal.DefaultAnalyticsEventHandler$1
+!SESSION 2013-06-08 10:29:19.739 -----------------------------------------------
+eclipse.buildId=3.4.0.201304151603
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.aptana.js.core 4 0 2013-06-08 10:30:06.210
+!MESSAGE (Build 3.4.0.201304151603) [ERROR]  NPM is not installed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: NPM is not installed.
+	at com.aptana.js.internal.core.node.NodePackageManager.getConfigValue(NodePackageManager.java:506)
+	at com.aptana.js.internal.core.node.NodePackageManager.getConfigPrefixPath(NodePackageManager.java:563)
+	at com.aptana.js.internal.core.node.NodePackageManager.getModulesPath(NodePackageManager.java:539)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.getModulesPath(NodeModuleResolver.java:262)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.globalFolders(NodeModuleResolver.java:247)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.nodeModulesPaths(NodeModuleResolver.java:216)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.loadNodeModules(NodeModuleResolver.java:173)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.resolve(NodeModuleResolver.java:93)
+	at com.aptana.js.core.inferencing.RequireResolverFactory.resolve(RequireResolverFactory.java:152)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.resolve(JSNodeTypeInferrer.java:782)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:725)
+	at com.aptana.js.core.parsing.ast.JSInvokeNode.accept(JSInvokeNode.java:31)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processValues(JSSymbolTypeInferrer.java:559)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:347)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processProperties(JSSymbolTypeInferrer.java:467)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:350)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:384)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processWindowAssignments(JSFileIndexingParticipant.java:469)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processLambdas(JSFileIndexingParticipant.java:148)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processParseResults(JSFileIndexingParticipant.java:258)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.index(JSFileIndexingParticipant.java:105)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildFile(IndexBuildParticipant.java:114)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildFile(LazyBuildParticipant.java:72)
+	at com.aptana.core.build.UnifiedBuilder.buildFile(UnifiedBuilder.java:603)
+	at com.aptana.core.build.UnifiedBuilder.doBuildFiles(UnifiedBuilder.java:514)
+	at com.aptana.core.build.UnifiedBuilder.buildFiles(UnifiedBuilder.java:486)
+	at com.aptana.core.build.UnifiedBuilder.fullBuild(UnifiedBuilder.java:332)
+	at com.aptana.core.build.UnifiedBuilder.build(UnifiedBuilder.java:167)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:513)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:422)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:826)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.aptana.js.core 4 0 2013-06-08 10:30:06.212
+!MESSAGE NPM is not installed.
+!SESSION 2013-06-10 23:39:34.640 -----------------------------------------------
+eclipse.buildId=3.4.0.201304151603
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.aptana.shared_core 1 1 2013-06-10 23:42:25.310
+!MESSAGE Information about process of adding new interpreter:
+- Opening dialog to request executable (or jar).
+- Chosen interpreter (name and file):'Tuple [C:\Python27\python.exe -- C:\Python27\python.exe]
+- Ok, file is non-null. Getting info on:C:\Python27\python.exe
+- Beggining task:Getting libs totalWork:100
+- Setting task name:Mounting executable string...
+- Setting task name:Executing:  C:\Python27\python.exe -u C:\Programme\Aptana\plugins\org.python.pydev_2.7.0.2013032300\pysrc\interpreterInfo.py
+- Setting task name:Making pythonpath environment... C:\Python27\python.exe -u C:\Programme\Aptana\plugins\org.python.pydev_2.7.0.2013032300\pysrc\interpreterInfo.py
+- Setting task name:Making exec... C:\Python27\python.exe -u C:\Programme\Aptana\plugins\org.python.pydev_2.7.0.2013032300\pysrc\interpreterInfo.py
+- Setting task name:Reading output...
+- Setting task name:Waiting for process to finish.
+- Success getting the info. Result:<xml>
+<name>C:\Python27\python.exe</name>
+<version>2.7</version>
+<executable>C:\Python27\python.exe</executable>
+<lib>C:\Programme\Aptana\plugins\org.python.pydev_2.7.0.2013032300\pysrc</lib>
+<lib>C:\Windows\system32\python27.zip</lib>
+<lib>C:\Python27\DLLs</lib>
+<lib>C:\Python27\lib</lib>
+<lib>C:\Python27\lib\plat-win</lib>
+<lib>C:\Python27\lib\lib-tk</lib>
+<lib>C:\Python27</lib>
+<lib>C:\Python27\lib\site-packages</lib>
+<forced_lib>Image</forced_lib>
+<forced_lib>OpenGL</forced_lib>
+<forced_lib>__builtin__</forced_lib>
+<forced_lib>__main__</forced_lib>
+<forced_lib>_ast</forced_lib>
+<forced_lib>_bisect</forced_lib>
+<forced_lib>_bytesio</forced_lib>
+<forced_lib>_codecs</forced_lib>
+<forced_lib>_codecs_cn</forced_lib>
+<forced_lib>_codecs_hk</forced_lib>
+<forced_lib>_codecs_iso2022</forced_lib>
+<forced_lib>_codecs_jp</forced_lib>
+<forced_lib>_codecs_kr</forced_lib>
+<forced_lib>_codecs_tw</forced_lib>
+<forced_lib>_collections</forced_lib>
+<forced_lib>_csv</forced_lib>
+<forced_lib>_fileio</forced_lib>
+<forced_lib>_functools</forced_lib>
+<forced_lib>_heapq</forced_lib>
+<forced_lib>_hotshot</forced_lib>
+<forced_lib>_io</forced_lib>
+<forced_lib>_json</forced_lib>
+<forced_lib>_locale</forced_lib>
+<forced_lib>_lsprof</forced_lib>
+<forced_lib>_md5</forced_lib>
+<forced_lib>_multibytecodec</forced_lib>
+<forced_lib>_random</forced_lib>
+<forced_lib>_sha</forced_lib>
+<forced_lib>_sha256</forced_lib>
+<forced_lib>_sha512</forced_lib>
+<forced_lib>_sre</forced_lib>
+<forced_lib>_struct</forced_lib>
+<forced_lib>_subprocess</forced_lib>
+<forced_lib>_symtable</forced_lib>
+<forced_lib>_warnings</forced_lib>
+<forced_lib>_weakref</forced_lib>
+<forced_lib>_winreg</forced_lib>
+<forced_lib>array</forced_lib>
+<forced_lib>audioop</forced_lib>
+<forced_lib>binascii</forced_lib>
+<forced_lib>cPickle</forced_lib>
+<forced_lib>cStringIO</forced_lib>
+<forced_lib>cmath</forced_lib>
+<forced_lib>datetime</forced_lib>
+<forced_lib>email</forced_lib>
+<forced_lib>errno</forced_lib>
+<forced_lib>exceptions</forced_lib>
+<forced_lib>future_builtins</forced_lib>
+<forced_lib>gc</forced_lib>
+<forced_lib>hashlib</forced_lib>
+<forced_lib>imageop</forced_lib>
+<forced_lib>imp</forced_lib>
+<forced_lib>itertools</forced_lib>
+<forced_lib>marshal</forced_lib>
+<forced_lib>math</forced_lib>
+<forced_lib>mmap</forced_lib>
+<forced_lib>msvcrt</forced_lib>
+<forced_lib>nt</forced_lib>
+<forced_lib>numpy</forced_lib>
+<forced_lib>operator</forced_lib>
+<forced_lib>os</forced_lib>
+<forced_lib>os.path</forced_lib>
+<forced_lib>parser</forced_lib>
+<forced_lib>pytest</forced_lib>
+<forced_lib>scipy</forced_lib>
+<forced_lib>signal</forced_lib>
+<forced_lib>socket</forced_lib>
+<forced_lib>strop</forced_lib>
+<forced_lib>sys</forced_lib>
+<forced_lib>thread</forced_lib>
+<forced_lib>time</forced_lib>
+<forced_lib>wx</forced_lib>
+<forced_lib>wxPython</forced_lib>
+<forced_lib>xxsubtype</forced_lib>
+<forced_lib>zipimport</forced_lib>
+<forced_lib>zlib</forced_lib>
+</xml>
+
+!STACK 0
+java.lang.RuntimeException: Information about process of adding new interpreter:
+- Opening dialog to request executable (or jar).
+- Chosen interpreter (name and file):'Tuple [C:\Python27\python.exe -- C:\Python27\python.exe]
+- Ok, file is non-null. Getting info on:C:\Python27\python.exe
+- Beggining task:Getting libs totalWork:100
+- Setting task name:Mounting executable string...
+- Setting task name:Executing:  C:\Python27\python.exe -u C:\Programme\Aptana\plugins\org.python.pydev_2.7.0.2013032300\pysrc\interpreterInfo.py
+- Setting task name:Making pythonpath environment... C:\Python27\python.exe -u C:\Programme\Aptana\plugins\org.python.pydev_2.7.0.2013032300\pysrc\interpreterInfo.py
+- Setting task name:Making exec... C:\Python27\python.exe -u C:\Programme\Aptana\plugins\org.python.pydev_2.7.0.2013032300\pysrc\interpreterInfo.py
+- Setting task name:Reading output...
+- Setting task name:Waiting for process to finish.
+- Success getting the info. Result:<xml>
+<name>C:\Python27\python.exe</name>
+<version>2.7</version>
+<executable>C:\Python27\python.exe</executable>
+<lib>C:\Programme\Aptana\plugins\org.python.pydev_2.7.0.2013032300\pysrc</lib>
+<lib>C:\Windows\system32\python27.zip</lib>
+<lib>C:\Python27\DLLs</lib>
+<lib>C:\Python27\lib</lib>
+<lib>C:\Python27\lib\plat-win</lib>
+<lib>C:\Python27\lib\lib-tk</lib>
+<lib>C:\Python27</lib>
+<lib>C:\Python27\lib\site-packages</lib>
+<forced_lib>Image</forced_lib>
+<forced_lib>OpenGL</forced_lib>
+<forced_lib>__builtin__</forced_lib>
+<forced_lib>__main__</forced_lib>
+<forced_lib>_ast</forced_lib>
+<forced_lib>_bisect</forced_lib>
+<forced_lib>_bytesio</forced_lib>
+<forced_lib>_codecs</forced_lib>
+<forced_lib>_codecs_cn</forced_lib>
+<forced_lib>_codecs_hk</forced_lib>
+<forced_lib>_codecs_iso2022</forced_lib>
+<forced_lib>_codecs_jp</forced_lib>
+<forced_lib>_codecs_kr</forced_lib>
+<forced_lib>_codecs_tw</forced_lib>
+<forced_lib>_collections</forced_lib>
+<forced_lib>_csv</forced_lib>
+<forced_lib>_fileio</forced_lib>
+<forced_lib>_functools</forced_lib>
+<forced_lib>_heapq</forced_lib>
+<forced_lib>_hotshot</forced_lib>
+<forced_lib>_io</forced_lib>
+<forced_lib>_json</forced_lib>
+<forced_lib>_locale</forced_lib>
+<forced_lib>_lsprof</forced_lib>
+<forced_lib>_md5</forced_lib>
+<forced_lib>_multibytecodec</forced_lib>
+<forced_lib>_random</forced_lib>
+<forced_lib>_sha</forced_lib>
+<forced_lib>_sha256</forced_lib>
+<forced_lib>_sha512</forced_lib>
+<forced_lib>_sre</forced_lib>
+<forced_lib>_struct</forced_lib>
+<forced_lib>_subprocess</forced_lib>
+<forced_lib>_symtable</forced_lib>
+<forced_lib>_warnings</forced_lib>
+<forced_lib>_weakref</forced_lib>
+<forced_lib>_winreg</forced_lib>
+<forced_lib>array</forced_lib>
+<forced_lib>audioop</forced_lib>
+<forced_lib>binascii</forced_lib>
+<forced_lib>cPickle</forced_lib>
+<forced_lib>cStringIO</forced_lib>
+<forced_lib>cmath</forced_lib>
+<forced_lib>datetime</forced_lib>
+<forced_lib>email</forced_lib>
+<forced_lib>errno</forced_lib>
+<forced_lib>exceptions</forced_lib>
+<forced_lib>future_builtins</forced_lib>
+<forced_lib>gc</forced_lib>
+<forced_lib>hashlib</forced_lib>
+<forced_lib>imageop</forced_lib>
+<forced_lib>imp</forced_lib>
+<forced_lib>itertools</forced_lib>
+<forced_lib>marshal</forced_lib>
+<forced_lib>math</forced_lib>
+<forced_lib>mmap</forced_lib>
+<forced_lib>msvcrt</forced_lib>
+<forced_lib>nt</forced_lib>
+<forced_lib>numpy</forced_lib>
+<forced_lib>operator</forced_lib>
+<forced_lib>os</forced_lib>
+<forced_lib>os.path</forced_lib>
+<forced_lib>parser</forced_lib>
+<forced_lib>pytest</forced_lib>
+<forced_lib>scipy</forced_lib>
+<forced_lib>signal</forced_lib>
+<forced_lib>socket</forced_lib>
+<forced_lib>strop</forced_lib>
+<forced_lib>sys</forced_lib>
+<forced_lib>thread</forced_lib>
+<forced_lib>time</forced_lib>
+<forced_lib>wx</forced_lib>
+<forced_lib>wxPython</forced_lib>
+<forced_lib>xxsubtype</forced_lib>
+<forced_lib>zipimport</forced_lib>
+<forced_lib>zlib</forced_lib>
+</xml>
+
+	at org.python.pydev.core.log.Log.logInfo(Log.java:62)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterEditor.getNewInputObject(AbstractInterpreterEditor.java:1074)
+	at org.python.copiedfromeclipsesrc.PythonListEditor.addPressed(PythonListEditor.java:135)
+	at org.python.copiedfromeclipsesrc.PythonListEditor$1.widgetSelected(PythonListEditor.java:225)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:240)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4165)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3754)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.ui.internal.dialogs.WorkbenchPreferenceDialog.open(WorkbenchPreferenceDialog.java:215)
+	at org.eclipse.ui.internal.handlers.ShowPreferencePageHandler.execute(ShowPreferencePageHandler.java:54)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:293)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.handlers.SlaveHandlerService.executeCommand(SlaveHandlerService.java:241)
+	at org.eclipse.ui.internal.actions.CommandAction.runWithEvent(CommandAction.java:157)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4165)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3754)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at com.aptana.rcp.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY com.aptana.shared_core 1 1 2013-06-10 23:44:24.452
+!MESSAGE Restoring info for: C:\Python27\python.exe
+!STACK 0
+java.lang.RuntimeException: Restoring info for: C:\Python27\python.exe
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:495)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.internalRecreateCacheGetInterpreterInfos(AbstractInterpreterManager.java:328)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:618)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterPreferencesPage$3.run(AbstractInterpreterPreferencesPage.java:253)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: java.io.IOException: Expecting: C:\Users\Alex\Documents\GitHub\DjCrowd\.metadata\.plugins\org.python.pydev\v1_258tvcdekrk5tmtf5h0ez044z\modulesKeys to exist (and be a file).
+	at org.python.pydev.editor.codecompletion.revisited.ModulesManager.loadFromFile(ModulesManager.java:267)
+	at org.python.pydev.editor.codecompletion.revisited.SystemModulesManager.load(SystemModulesManager.java:360)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:493)
+	... 4 more
+
+!ENTRY com.aptana.shared_core 1 1 2013-06-10 23:44:25.117
+!MESSAGE Finished restoring information for: C:\Python27\python.exe at: C:\Users\Alex\Documents\GitHub\DjCrowd\.metadata\.plugins\org.python.pydev\v1_258tvcdekrk5tmtf5h0ez044z
+!STACK 0
+java.lang.RuntimeException: Finished restoring information for: C:\Python27\python.exe at: C:\Users\Alex\Documents\GitHub\DjCrowd\.metadata\.plugins\org.python.pydev\v1_258tvcdekrk5tmtf5h0ez044z
+	at org.python.pydev.core.log.Log.logInfo(Log.java:62)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.getInterpretersFromPersistedString(AbstractInterpreterManager.java:540)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.internalRecreateCacheGetInterpreterInfos(AbstractInterpreterManager.java:328)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.setInfos(AbstractInterpreterManager.java:618)
+	at org.python.pydev.ui.pythonpathconf.AbstractInterpreterPreferencesPage$3.run(AbstractInterpreterPreferencesPage.java:253)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY com.aptana.shared_core 4 4 2013-06-10 23:44:25.757
+!MESSAGE Info: Rebuilding internal caches: C:\Users\Alex\Documents\GitHub\DjCrowd\.metadata\.plugins\com.python.pydev.analysis\python_v1_258tvcdekrk5tmtf5h0ez044z\python.pydevsysteminfo (Expected error to be provided and got no error!)
+
+!ENTRY com.aptana.shared_core 4 4 2013-06-10 23:46:05.082
+!MESSAGE Info: Rebuilding internal caches: C:\Users\Alex\Documents\GitHub\DjCrowd\.metadata\.plugins\org.eclipse.core.resources\.projects\ScaleYourFriends_Server\com.python.pydev.analysis\AdditionalProjectInterpreterInfo.pydevinfo (Expected error to be provided and got no error!)
+
+!ENTRY com.aptana.js.core 4 0 2013-06-10 23:46:06.000
+!MESSAGE (Build 3.4.0.201304151603) [ERROR]  NPM is not installed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: NPM is not installed.
+	at com.aptana.js.internal.core.node.NodePackageManager.getConfigValue(NodePackageManager.java:506)
+	at com.aptana.js.internal.core.node.NodePackageManager.getConfigPrefixPath(NodePackageManager.java:563)
+	at com.aptana.js.internal.core.node.NodePackageManager.getModulesPath(NodePackageManager.java:539)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.getModulesPath(NodeModuleResolver.java:262)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.globalFolders(NodeModuleResolver.java:247)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.nodeModulesPaths(NodeModuleResolver.java:216)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.loadNodeModules(NodeModuleResolver.java:173)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.resolve(NodeModuleResolver.java:93)
+	at com.aptana.js.core.inferencing.RequireResolverFactory.resolve(RequireResolverFactory.java:152)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.resolve(JSNodeTypeInferrer.java:782)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:725)
+	at com.aptana.js.core.parsing.ast.JSInvokeNode.accept(JSInvokeNode.java:31)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processValues(JSSymbolTypeInferrer.java:559)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:347)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processProperties(JSSymbolTypeInferrer.java:467)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:350)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:384)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processWindowAssignments(JSFileIndexingParticipant.java:469)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processLambdas(JSFileIndexingParticipant.java:148)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processParseResults(JSFileIndexingParticipant.java:258)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.index(JSFileIndexingParticipant.java:105)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildFile(IndexBuildParticipant.java:114)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildFile(LazyBuildParticipant.java:72)
+	at com.aptana.core.build.UnifiedBuilder.buildFile(UnifiedBuilder.java:603)
+	at com.aptana.core.build.UnifiedBuilder.doBuildFiles(UnifiedBuilder.java:514)
+	at com.aptana.core.build.UnifiedBuilder.buildFiles(UnifiedBuilder.java:486)
+	at com.aptana.core.build.UnifiedBuilder.fullBuild(UnifiedBuilder.java:332)
+	at com.aptana.core.build.UnifiedBuilder.build(UnifiedBuilder.java:167)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.aptana.js.core 4 0 2013-06-10 23:46:06.000
+!MESSAGE NPM is not installed.
+!SESSION 2013-06-11 00:17:48.723 -----------------------------------------------
+eclipse.buildId=3.4.0.201304151603
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.aptana.js.core 4 0 2013-06-11 00:41:19.757
+!MESSAGE (Build 3.4.0.201304151603) [ERROR]  NPM is not installed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: NPM is not installed.
+	at com.aptana.js.internal.core.node.NodePackageManager.getConfigValue(NodePackageManager.java:506)
+	at com.aptana.js.internal.core.node.NodePackageManager.getConfigPrefixPath(NodePackageManager.java:563)
+	at com.aptana.js.internal.core.node.NodePackageManager.getModulesPath(NodePackageManager.java:539)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.getModulesPath(NodeModuleResolver.java:262)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.globalFolders(NodeModuleResolver.java:247)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.nodeModulesPaths(NodeModuleResolver.java:216)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.loadNodeModules(NodeModuleResolver.java:173)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.resolve(NodeModuleResolver.java:93)
+	at com.aptana.js.core.inferencing.RequireResolverFactory.resolve(RequireResolverFactory.java:152)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.resolve(JSNodeTypeInferrer.java:782)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:725)
+	at com.aptana.js.core.parsing.ast.JSInvokeNode.accept(JSInvokeNode.java:31)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processValues(JSSymbolTypeInferrer.java:559)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:347)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processProperties(JSSymbolTypeInferrer.java:467)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:350)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:384)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processWindowAssignments(JSFileIndexingParticipant.java:469)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processLambdas(JSFileIndexingParticipant.java:148)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processParseResults(JSFileIndexingParticipant.java:258)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.index(JSFileIndexingParticipant.java:105)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildFile(IndexBuildParticipant.java:114)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildFile(LazyBuildParticipant.java:72)
+	at com.aptana.core.build.UnifiedBuilder.buildFile(UnifiedBuilder.java:603)
+	at com.aptana.core.build.UnifiedBuilder.doBuildFiles(UnifiedBuilder.java:514)
+	at com.aptana.core.build.UnifiedBuilder.buildFiles(UnifiedBuilder.java:486)
+	at com.aptana.core.build.UnifiedBuilder.fullBuild(UnifiedBuilder.java:332)
+	at com.aptana.core.build.UnifiedBuilder.build(UnifiedBuilder.java:167)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.aptana.js.core 4 0 2013-06-11 00:41:19.760
+!MESSAGE NPM is not installed.
+
+!ENTRY com.aptana.js.core 4 0 2013-06-11 00:43:15.164
+!MESSAGE (Build 3.4.0.201304151603) [ERROR]  NPM is not installed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: NPM is not installed.
+	at com.aptana.js.internal.core.node.NodePackageManager.getConfigValue(NodePackageManager.java:506)
+	at com.aptana.js.internal.core.node.NodePackageManager.getConfigPrefixPath(NodePackageManager.java:563)
+	at com.aptana.js.internal.core.node.NodePackageManager.getModulesPath(NodePackageManager.java:539)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.getModulesPath(NodeModuleResolver.java:262)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.globalFolders(NodeModuleResolver.java:247)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.nodeModulesPaths(NodeModuleResolver.java:216)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.loadNodeModules(NodeModuleResolver.java:173)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.resolve(NodeModuleResolver.java:93)
+	at com.aptana.js.core.inferencing.RequireResolverFactory.resolve(RequireResolverFactory.java:152)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.resolve(JSNodeTypeInferrer.java:782)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:725)
+	at com.aptana.js.core.parsing.ast.JSInvokeNode.accept(JSInvokeNode.java:31)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processValues(JSSymbolTypeInferrer.java:559)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:347)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processProperties(JSSymbolTypeInferrer.java:467)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:350)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:384)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processWindowAssignments(JSFileIndexingParticipant.java:469)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processLambdas(JSFileIndexingParticipant.java:148)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processParseResults(JSFileIndexingParticipant.java:258)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.index(JSFileIndexingParticipant.java:105)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildFile(IndexBuildParticipant.java:114)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildFile(LazyBuildParticipant.java:72)
+	at com.aptana.core.build.UnifiedBuilder.buildFile(UnifiedBuilder.java:603)
+	at com.aptana.core.build.UnifiedBuilder.doBuildFiles(UnifiedBuilder.java:514)
+	at com.aptana.core.build.UnifiedBuilder.buildFiles(UnifiedBuilder.java:486)
+	at com.aptana.core.build.UnifiedBuilder.incrementalBuild(UnifiedBuilder.java:252)
+	at com.aptana.core.build.UnifiedBuilder.build(UnifiedBuilder.java:186)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.aptana.js.core 4 0 2013-06-11 00:43:15.165
+!MESSAGE NPM is not installed.
+!SESSION 2013-06-11 10:57:30.803 -----------------------------------------------
+eclipse.buildId=3.4.0.201304151603
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.aptana.js.core 4 0 2013-06-11 10:59:27.833
+!MESSAGE (Build 3.4.0.201304151603) [ERROR]  NPM is not installed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: NPM is not installed.
+	at com.aptana.js.internal.core.node.NodePackageManager.getConfigValue(NodePackageManager.java:506)
+	at com.aptana.js.internal.core.node.NodePackageManager.getConfigPrefixPath(NodePackageManager.java:563)
+	at com.aptana.js.internal.core.node.NodePackageManager.getModulesPath(NodePackageManager.java:539)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.getModulesPath(NodeModuleResolver.java:262)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.globalFolders(NodeModuleResolver.java:247)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.nodeModulesPaths(NodeModuleResolver.java:216)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.loadNodeModules(NodeModuleResolver.java:173)
+	at com.aptana.js.internal.core.inferencing.NodeModuleResolver.resolve(NodeModuleResolver.java:93)
+	at com.aptana.js.core.inferencing.RequireResolverFactory.resolve(RequireResolverFactory.java:152)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.resolve(JSNodeTypeInferrer.java:782)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:725)
+	at com.aptana.js.core.parsing.ast.JSInvokeNode.accept(JSInvokeNode.java:31)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processValues(JSSymbolTypeInferrer.java:559)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:347)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processProperties(JSSymbolTypeInferrer.java:467)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:350)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:384)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processWindowAssignments(JSFileIndexingParticipant.java:469)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processLambdas(JSFileIndexingParticipant.java:148)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.processParseResults(JSFileIndexingParticipant.java:258)
+	at com.aptana.js.core.index.JSFileIndexingParticipant.index(JSFileIndexingParticipant.java:105)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildFile(IndexBuildParticipant.java:114)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildFile(LazyBuildParticipant.java:72)
+	at com.aptana.core.build.UnifiedBuilder.buildFile(UnifiedBuilder.java:603)
+	at com.aptana.core.build.UnifiedBuilder.doBuildFiles(UnifiedBuilder.java:514)
+	at com.aptana.core.build.UnifiedBuilder.buildFiles(UnifiedBuilder.java:486)
+	at com.aptana.core.build.UnifiedBuilder.incrementalBuild(UnifiedBuilder.java:252)
+	at com.aptana.core.build.UnifiedBuilder.build(UnifiedBuilder.java:186)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 com.aptana.js.core 4 0 2013-06-11 10:59:27.848
+!MESSAGE NPM is not installed.
+!SESSION 2013-06-11 13:25:14.330 -----------------------------------------------
+eclipse.buildId=3.4.0.201304151603
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.aptana.shared_core 4 4 2013-06-11 13:49:27.276
+!MESSAGE Info: Rebuilding internal caches: C:\Users\Alex\Documents\GitHub\DjCrowd\.metadata\.plugins\org.eclipse.core.resources\.projects\ScaleYourFriends\com.python.pydev.analysis\AdditionalProjectInterpreterInfo.pydevinfo (Expected error to be provided and got no error!)

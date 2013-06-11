@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<head>
+	<meta charset="utf-8"/>
+	<title>Scale Your Friends</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+	<script src="functions.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<meta name="viewpoint" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+</head>
+<body>
+	<!--<script>
+	$(document).on("pageinit",randomnmb());
+	</script>-->
+<div data-role="page" id="askfirstq">
+    <div data-theme="a" data-role="header">
+        <h3>
+            Erste Frage
+        </h3>
+    </div>
+    <div data-role="content">
+    	<h3 id="random" align="center">Bestimmt einen Beginner!</h3>
+    	<input value="Beginner bestimmen" onclick="randomnmb()" type="submit" id="buttongg">
+        <div data-role="fieldcontain">
+            <label align="center" for="textarea1">
+            <!-- LABEL -->    
+            </label>
+            <textarea name="" id="frage" placeholder="Tippe deine Frage ein..."></textarea>
+            <br>
+            <br>
+            <a href="answerquestion.html" data-transition="slide">
+            <input value="Bestätigen" type="submit" id="buttongg" onclick="ask()">
+            </a>
+        </div>
+    </div>
+    <footer data-role="footer" data-position="fixed">
+    	<nav data-role="navbar">
+    		<ul>
+    			<li>
+    				<a href="group.html" data-icon="home">home</a>
+    			</li>
+    			<li>
+    				<a href="#" data-icon="gear">options</a>
+    			</li>
+    			<li>
+    				<a href="#" data-icon="info">info</a>
+    			</li>
+    		</ul>
+    	</nav>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="50" version="2.0">
+<workbench progressCount="44" version="2.0">
 <workbenchAdvisor/>
 <window height="728" width="1200" x="75" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -10,6 +10,7 @@
 <coolItem id="group.file" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="com.python.pydev.navigate.actionSet" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="137" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="84" y="22"/>
 <coolItem id="com.aptana.ui.globalActionSet" itemType="typeToolBarContribution" x="168" y="22"/>
@@ -17,7 +18,8 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="91" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="com.aptana.editor.css" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.python.pydev.editor.PythonEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.css" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.aptana.editor.js" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.aptana.editor.html" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -34,29 +36,34 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.aptana.editor.html" name="index.html" partName="index.html" path="C:/Users/Alex/Documents/GitHub/DjCrowd/Applikation/index.html" title="index.html" tooltip="Applikation/index.html" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Applikation/index.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1584" selectionTopPixel="336"/>
+<editor id="org.python.pydev.editor.PythonEditor" name="WebSocketServer.py" partName="WebSocketServer" path="C:/Users/Alex/Desktop/ScaleYourFriends/WebSocketServer.py" title="WebSocketServer" tooltip="ScaleYourFriends/WebSocketServer.py" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ScaleYourFriends/WebSocketServer.py"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2157" selectionTopPixel="711"/>
 </editor>
-<editor id="com.aptana.editor.js" name="functions.js" partName="functions.js" path="C:/Users/Alex/Documents/GitHub/DjCrowd/Applikation/functions.js" title="functions.js" tooltip="Applikation/functions.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Applikation/functions.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="642" selectionTopPixel="120"/>
+<editor activePart="true" focus="true" id="com.aptana.editor.html" name="index_online.html" partName="index_online.html" path="C:/Users/Alex/Desktop/ScaleYourFriends/index_online.html" title="index_online.html" tooltip="ScaleYourFriends/index_online.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ScaleYourFriends/index_online.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="345" selectionTopPixel="0"/>
 </editor>
-<editor id="com.aptana.editor.html" name="home.html" partName="home.html" path="C:/Users/Alex/Documents/GitHub/DjCrowd/Applikation/home.html" title="home.html" tooltip="Applikation/home.html" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Applikation/home.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="258" selectionTopPixel="0"/>
+<editor id="com.aptana.editor.html" name="online_home.html" partName="online_home.html" path="C:/Users/Alex/Desktop/ScaleYourFriends/online_home.html" title="online_home.html" tooltip="ScaleYourFriends/online_home.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ScaleYourFriends/online_home.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="845" selectionTopPixel="171"/>
 </editor>
-<editor id="com.aptana.editor.css" name="style.css" partName="style.css" path="C:/Users/Alex/Documents/GitHub/DjCrowd/Applikation/style.css" title="style.css" tooltip="Applikation/style.css" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Applikation/style.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="21" selectionTopPixel="0"/>
+<editor id="com.aptana.editor.html" name="index.html" partName="index.html" path="C:/Users/Alex/Documents/GitHub/DjCrowd/ljkl/index.html" title="index.html" tooltip="ljkl/index.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ljkl/index.html"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="585" selectionTopPixel="0"/>
 </editor>
 <editor id="com.aptana.editor.js" name="utility.js" partName="utility.js" path="C:/Users/Alex/Documents/GitHub/DjCrowd/Applikation/utility.js" title="utility.js" tooltip="Applikation/utility.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Applikation/utility.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="756" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.js" name="functions.js" partName="functions.js" path="C:/Users/Alex/Desktop/ScaleYourFriends/functions.js" title="functions.js" tooltip="ScaleYourFriends/functions.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ScaleYourFriends/functions.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="237" selectionTopPixel="12"/>
 </editor>
 </editors>
 <views>
@@ -68,6 +75,9 @@
 <view id="com.aptana.samples.ui.SamplesView" partName="Samples"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Warnings (37 items)"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -80,16 +90,23 @@
 <viewState/>
 </view>
 <view id="com.aptana.explorer.view" partName="App Explorer">
-<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled="" activeProject="Applikation">
-<project name="Applikation">
-<selection>
-<element path="/Applikation/index.html"/>
+<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled="" activeProject="ScaleYourFriends_Server">
+<project name="Applikation">&#x0A;<selection>&#x0A;<element path="/Applikation/index.html"/>
+</selection>
+</project>
+<project name="ScaleYourFriends_Server">&#x0A;<selection>&#x0A;<element path="/ScaleYourFriends_Server"/>
 </selection>
 </project>
 </viewState>
 </view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
+</view>
+<view id="org.python.pydev.navigator.view" partName="PyDev Package Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0">
+<expanded IMemento.internal.id="C:/Users/Alex/Documents/GitHub/DjCrowd/ScaleYourFriends_Server"/>
+<expanded IMemento.internal.id="C:/Users/Alex/Documents/GitHub/DjCrowd/ScaleYourFriends_Server/index"/>
+</viewState>
 </view>
 </views>
 <perspectives activePart="com.aptana.editor.html" activePerspective="com.aptana.ui.WebPerspective">
@@ -144,7 +161,7 @@
 <layout>
 <mainWindow>
 <info folder="true" part="left">
-<folder activePageID="com.aptana.explorer.view" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
 <page content="com.aptana.explorer.view" label="App Explorer"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
 <page content="com.aptana.ui.io.remoteview" label="LabelNotFound"/>
@@ -191,168 +208,237 @@
 </mainWindow>
 </layout>
 </perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.python.pydev.ui.perspective.PythonPerspectiveFactory" id="org.python.pydev.ui.PythonPerspective" label="PyDev"/>
+<alwaysOnActionSet id="com.aptana.browser.actionSet"/>
+<alwaysOnActionSet id="com.aptana.ruby.debug.ui.RubyDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="com.python.pydev.navigate.actionSet"/>
+<show_view_action id="org.python.pydev.views.PyCodeCoverageView"/>
+<show_view_action id="org.python.pydev.navigator.view"/>
+<show_view_action id="org.python.pydev.debug.pyunit.pyUnitView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<new_wizard_action id="org.python.pydev.ui.wizards.project.PythonProjectWizard"/>
+<new_wizard_action id="org.python.pydev.ui.wizards.files.PythonSourceFolderWizard"/>
+<new_wizard_action id="org.python.pydev.ui.wizards.files.PythonPackageWizard"/>
+<new_wizard_action id="org.python.pydev.ui.wizards.files.PythonModuleWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.python.pydev.navigator.view"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="topLeft">&#x0A;<folder activePageID="org.python.pydev.navigator.view" appearance="2" expanded="2">&#x0A;<page content="org.python.pydev.navigator.view" label="PyDev Package Explorer"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="882" ratioRight="294" relationship="2" relative="topLeft">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.25935373" ratioLeft="305" ratioRight="871" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottom" ratio="0.74958813" ratioLeft="455" ratioRight="152" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@28f841" ratio="0.74971294" ratioLeft="653" ratioRight="218" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
 </perspectives>
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/Applikation/index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Applikation/functions.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" path="/ScaleYourFriends/WebSocketServer.py"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/ScaleYourFriends/functions.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/ScaleYourFriends/index_online.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/ScaleYourFriends/online_home.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/ScaleYourFriends/online_home.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/ScaleYourFriends/index_online.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/ljkl/index.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Applikation/utility.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/Applikation/home.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.css" path="/Applikation/style.css"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/Applikation/index.html"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Applikation/functions.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/Applikation/index.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/ljkl/functions.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/ScaleYourFriends/functions.js"/>
 </editors>
 <item historyLabel="functions.js" index="1">
-<position info="not_deleted" x="315" y="0"/>
+<position info="not_deleted" x="9083" y="0"/>
 </item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1376" y="0"/>
+<item historyLabel="online_home.html" index="3">
+<position info="not_deleted" x="1371" y="0"/>
 </item>
-<item historyLabel="functions.js" index="1">
+<item historyLabel="WebSocketServer" index="0">
+<position info="not_deleted" x="2007" y="0"/>
+</item>
+<item historyLabel="index_online.html" index="2">
+<position info="not_deleted" x="1089" y="0"/>
+</item>
+<item historyLabel="WebSocketServer" index="0">
+<position info="not_deleted" x="2007" y="0"/>
+</item>
+<item historyLabel="online_home.html" index="4">
 <position/>
 </item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1376" y="0"/>
+<item historyLabel="WebSocketServer" index="0">
+<position info="not_deleted" x="2228" y="0"/>
 </item>
-<item historyLabel="functions.js" index="1">
-<position info="not_deleted" x="234" y="0"/>
+<item historyLabel="index_online.html" index="5">
+<position info="not_deleted" x="766" y="0"/>
 </item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1376" y="0"/>
-</item>
-<item historyLabel="functions.js" index="1">
+<item historyLabel="online_home.html" index="4">
 <position/>
 </item>
-<item historyLabel="style.css" index="4">
-<position info="not_deleted" x="21" y="0"/>
+<item historyLabel="index_online.html" index="5">
+<position info="not_deleted" x="766" y="0"/>
 </item>
-<item historyLabel="home.html" index="3">
+<item historyLabel="WebSocketServer" index="0">
+<position info="not_deleted" x="2228" y="0"/>
+</item>
+<item historyLabel="online_home.html" index="4">
 <position/>
 </item>
-<item historyLabel="utility.js" index="2">
-<position info="not_deleted" x="756" y="0"/>
+<item historyLabel="index_online.html" index="5">
+<position info="not_deleted" x="1060" y="0"/>
 </item>
-<item historyLabel="functions.js" index="1">
-<position info="not_deleted" x="453" y="0"/>
+<item historyLabel="WebSocketServer" index="0">
+<position info="not_deleted" x="2017" y="0"/>
 </item>
-<item historyLabel="home.html" index="3">
+<item historyLabel="online_home.html" index="4">
 <position/>
 </item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="1376" y="0"/>
+<item historyLabel="index.html" index="6">
+<position info="not_deleted" x="585" y="0"/>
 </item>
-<item historyLabel="functions.js" index="1">
-<position info="not_deleted" x="534" y="0"/>
+<item historyLabel="WebSocketServer" index="0">
+<position info="not_deleted" x="2157" y="0"/>
 </item>
-<item historyLabel="home.html" index="3">
+<item historyLabel="index_online.html" index="5">
+<position info="not_deleted" x="992" y="0"/>
+</item>
+<item historyLabel="online_home.html" index="4">
 <position/>
 </item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="8" y="0"/>
-</item>
-<item historyLabel="functions.js" index="1">
-<position info="not_deleted" x="534" y="0"/>
-</item>
-<item historyLabel="home.html" index="3">
-<position info="not_deleted" x="552" y="0"/>
-</item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="271" y="99"/>
-</item>
-<item historyLabel="home.html" index="3">
-<position/>
-</item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="370" y="158"/>
-</item>
-<item historyLabel="home.html" index="3">
-<position info="not_deleted" x="265" y="2"/>
-</item>
-<item historyLabel="index.html" index="0">
-<position info="not_deleted" x="370" y="158"/>
-</item>
-<item historyLabel="home.html" index="3">
-<position/>
-</item>
-<item historyLabel="index.html" index="5">
-<position/>
-</item>
-<item historyLabel="home.html" index="3">
+<item historyLabel="utility.js" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="functions.js" index="6">
-<position info="not_deleted" x="489" y="51"/>
+<item historyLabel="functions.js" index="8">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="home.html" index="3">
-<position info="not_deleted" x="8" y="0"/>
+<item historyLabel="index_online.html" index="5">
+<position info="not_deleted" x="87" y="257"/>
 </item>
-<item historyLabel="functions.js" index="6">
-<position info="not_deleted" x="489" y="51"/>
-</item>
-<item historyLabel="functions.js" index="6">
-<position info="not_deleted" x="583" y="0"/>
-</item>
-<item historyLabel="functions.js" index="6">
-<position info="not_deleted" x="667" y="0"/>
-</item>
-<item historyLabel="functions.js" index="6">
-<position info="not_deleted" x="650" y="0"/>
-</item>
-<item historyLabel="home.html" index="3">
-<position info="not_deleted" x="467" y="0"/>
-</item>
-<item historyLabel="home.html" index="3">
-<position info="not_deleted" x="752" y="0"/>
-</item>
-<item historyLabel="functions.js" index="6">
-<position info="not_deleted" x="620" y="0"/>
-</item>
-<item historyLabel="index.html" index="5">
+<item historyLabel="online_home.html" index="4">
 <position/>
 </item>
-<item historyLabel="home.html" index="3">
-<position info="not_deleted" x="752" y="0"/>
+<item historyLabel="index_online.html" index="5">
+<position info="not_deleted" x="87" y="257"/>
 </item>
-<item historyLabel="home.html" index="3">
-<position info="not_deleted" x="463" y="0"/>
+<item historyLabel="index_online.html" index="5">
+<position/>
 </item>
-<item historyLabel="functions.js" index="6">
-<position info="not_deleted" x="646" y="0"/>
+<item historyLabel="functions.js" index="8">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="home.html" index="3">
-<position info="not_deleted" x="763" y="0"/>
+<item historyLabel="functions.js" index="8">
+<position/>
 </item>
-<item historyLabel="functions.js" index="6">
-<position info="not_deleted" x="646" y="0"/>
+<item historyLabel="functions.js" index="8">
+<position/>
 </item>
-<item historyLabel="index.html" index="5">
-<position info="not_deleted" x="1469" y="0"/>
+<item historyLabel="index_online.html" index="5">
+<position/>
 </item>
-<item historyLabel="functions.js" index="6">
-<position info="not_deleted" x="542" y="0"/>
+<item historyLabel="functions.js" index="8">
+<position info="not_deleted" x="8986" y="0"/>
 </item>
-<item historyLabel="home.html" index="3">
-<position info="not_deleted" x="15" y="0"/>
+<item historyLabel="index_online.html" index="5">
+<position info="not_deleted" x="1567" y="0"/>
 </item>
-<item historyLabel="index.html" index="5">
-<position info="not_deleted" x="271" y="254"/>
+<item historyLabel="online_home.html" index="4">
+<position/>
 </item>
-<item historyLabel="functions.js" index="6">
-<position info="not_deleted" x="642" y="0"/>
+<item historyLabel="online_home.html" index="4">
+<position/>
 </item>
-<item historyLabel="home.html" index="3">
-<position info="not_deleted" x="15" y="0"/>
+<item historyLabel="online_home.html" index="4">
+<position/>
 </item>
-<item historyLabel="index.html" index="7">
-<position info="not_deleted" x="271" y="254"/>
+<item historyLabel="index.html" index="6">
+<position info="not_deleted" x="585" y="0"/>
 </item>
-<item historyLabel="home.html" index="3">
-<position info="not_deleted" x="258" y="0"/>
+<item historyLabel="functions.js" index="8">
+<position info="not_deleted" x="8986" y="0"/>
 </item>
-<item active="true" historyLabel="index.html" index="7">
-<position info="not_deleted" x="271" y="254"/>
+<item historyLabel="online_home.html" index="4">
+<position info="not_deleted" x="641" y="0"/>
+</item>
+<item historyLabel="functions.js" index="8">
+<position info="not_deleted" x="8986" y="0"/>
+</item>
+<item historyLabel="online_home.html" index="4">
+<position/>
+</item>
+<item historyLabel="functions.js" index="9">
+<position info="not_deleted" x="237" y="0"/>
+</item>
+<item historyLabel="online_home.html" index="4">
+<position info="not_deleted" x="1487" y="0"/>
+</item>
+<item historyLabel="index_online.html" index="5">
+<position/>
+</item>
+<item historyLabel="functions.js" index="9">
+<position info="not_deleted" x="237" y="0"/>
+</item>
+<item historyLabel="index_online.html" index="5">
+<position info="not_deleted" x="263" y="0"/>
+</item>
+<item historyLabel="functions.js" index="9">
+<position info="not_deleted" x="237" y="0"/>
+</item>
+<item historyLabel="online_home.html" index="4">
+<position info="not_deleted" x="845" y="0"/>
+</item>
+<item historyLabel="functions.js" index="9">
+<position info="not_deleted" x="237" y="0"/>
+</item>
+<item historyLabel="index_online.html" index="5">
+<position info="not_deleted" x="263" y="0"/>
+</item>
+<item historyLabel="WebSocketServer" index="0">
+<position info="not_deleted" x="2157" y="0"/>
+</item>
+<item active="true" historyLabel="index_online.html" index="5">
+<position info="not_deleted" x="263" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -371,20 +457,50 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="functions.js" tooltip="ScaleYourFriends/functions.js">
+<persistable path="/ScaleYourFriends/functions.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="functions.js" tooltip="ljkl/functions.js">
+<persistable path="/ljkl/functions.js"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="utility.js" tooltip="Applikation/utility.js">
 <persistable path="/Applikation/utility.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.css" name="style.css" tooltip="Applikation/style.css">
-<persistable path="/Applikation/style.css"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" name="index.html" tooltip="ljkl/index.html">
+<persistable path="/ljkl/index.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" name="home.html" tooltip="Applikation/home.html">
-<persistable path="/Applikation/home.html"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" name="online_home.html" tooltip="ScaleYourFriends/online_home.html">
+<persistable path="/ScaleYourFriends/online_home.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="functions.js" tooltip="Applikation/functions.js">
-<persistable path="/Applikation/functions.js"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" name="index_online.html" tooltip="ScaleYourFriends/index_online.html">
+<persistable path="/ScaleYourFriends/index_online.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" name="index.html" tooltip="Applikation/index.html">
-<persistable path="/Applikation/index.html"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="WebSocketServer.py" tooltip="ScaleYourFriends_Server/index/WebSocketServer.py">
+<persistable path="/ScaleYourFriends_Server/index/WebSocketServer.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="home.py" tooltip="ScaleYourFriends_Server/index/home.py">
+<persistable path="/ScaleYourFriends_Server/index/home.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.python.pydev.editor.PythonEditor" name="test.py" tooltip="ScaleYourFriends_Server/index/test.py">
+<persistable path="/ScaleYourFriends_Server/index/test.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" name="offline.html" tooltip="ljkl/offline.html">
+<persistable path="/ljkl/offline.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" name="offline_answerquestion.html" tooltip="ScaleYourFriends/offline_answerquestion.html">
+<persistable path="/ScaleYourFriends/offline_answerquestion.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" name="loss.html" tooltip="ScaleYourFriends/loss.html">
+<persistable path="/ScaleYourFriends/loss.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" name="list.html" tooltip="ScaleYourFriends/list.html">
+<persistable path="/ScaleYourFriends/list.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" name="group.html" tooltip="ScaleYourFriends/group.html">
+<persistable path="/ScaleYourFriends/group.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" name="addgroup.html" tooltip="ScaleYourFriends/addgroup.html">
+<persistable path="/ScaleYourFriends/addgroup.html"/>
 </file>
 </mruList>
 </workbench>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<head>
+	<meta charset="utf-8"/>
+	<title>Scale Your Friends</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+	<script type="text/javascript">
+		var sock = null;
+		var wsuri = "ws://localhost:9055";
+
+		function login() {
+
+			sock = new WebSocket(wsuri);
+
+			sock.onopen = function() {
+				console.log("connected to " + wsuri);
+			}
+
+			sock.onclose = function(e) {
+				console.log("connection closed (" + e.code + ")");
+				document.getElementById('chat').innerHTML += '<br>connection closed (' + e.code + ')';
+			}
+
+			sock.onmessage = function(e) {
+				console.log("message received: " + e.data);
+				document.getElementById('chat').innerHTML = '<br>' + e.data;
+				document.getElementById('headerf').innerHTML = e.data.substr(9);
+			}
+			
+			var username = prompt("Bitte Nutzernamen eingeben.");
+			
+			sock.send("USERNAME: "+username);
+
+			$("#content").load("online_home.html", function() {
+			});
+		}
+	</script>
+	<meta name="viewpoint" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+</head>
+<div data-role="page" id="index">
+	<div data-theme="a" data-role="header">
+		<a data-role="button" href="#page1" class="ui-btn-right"> Button </a>
+		<a data-role="button" href="#page1" class="ui-btn-left"> Button </a>
+		<h3 id="headerf"> Scale Your Friends </h3>
+	</div>
+	<article data-role="content" id="content">
+		<h3 style="text-align:center">Logge Dich ein!</h3>
+
+		<input value="Login" onclick="login()" type="submit" id="loginbutton">
+
+	</article>
+
+	<div id="chat"></div>
+
+	<footer data-role="footer" data-position="fixed">
+		<nav data-role="navbar">
+			<ul>
+				<li>
+					<a href="#" data-icon="home">home</a>
+				</li>
+				<li>
+					<a href="#" data-icon="gear">options</a>
+				</li>
+				<li>
+					<a href="#" data-icon="info">info</a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+</div>
+</html>
