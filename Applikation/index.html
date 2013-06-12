@@ -12,9 +12,58 @@ javascript put div at h/2+??; w/2+??
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
-	<script type="text/javascript" src="functions.js"></script>
 	<script type="text/javascript" src="utility.js"></script>
 	<meta name="viewpoint" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+	<script>
+		var sock = null;
+		var wsuri = "ws://localhost:9055";
+
+		function loadhome(username) {
+
+			/*TEST:*/
+			var users = new Array();
+			users.push('Heide');
+			users.push('Frauberg');
+			//alert(users);
+			/*:TEST*/
+			if (username == "") {
+				alert("Bitte einen Nutzernamen eingeben.");
+			} else if (users.indexOf(username) != -1) {
+				alert("Nutzername bereits vergeben.");
+			} else {
+				sock = new WebSocket(wsuri);
+
+				sock.onopen = function() {
+					console.log("connected to " + wsuri);
+				}
+
+				sock.onclose = function(e) {
+					console.log("connection closed (" + e.code + ")");
+					document.getElementById('chat').innerHTML += '<br>connection closed (' + e.code + ')';
+				}
+
+				sock.onmessage = function(e) {
+					console.log("message received: " + e.data);
+					document.getElementById('chat').innerHTML = '<br>' + e.data;
+				}
+				/*alert("yo");
+				 $("#content").load("home.html", function() {
+				 });
+				 $.get('home.html', function (response){
+				 var myHtml = $('#homecontent', response);
+				 $('#content').html(response);
+				 });*/
+
+				document.getElementById('headeruser').innerHTML = username;
+
+				//TODO:sock.send('USERNAME: '+username);
+
+				$("#content").load("home.html", function() {
+				});
+			}
+
+		}
+	</script>
 </head>
 
 <body>
@@ -22,8 +71,8 @@ javascript put div at h/2+??; w/2+??
 	<div data-role="page" id="index">
 
 		<header>
-			<div data-theme="a" data-role="header">
-				<h3> DjCrowd </h3>
+			<div data-theme="a" data-role="header" id="header">
+				<h3 id="headeruser"> DjCrowd </h3>
 			</div>
 		</header>
 
@@ -32,11 +81,16 @@ javascript put div at h/2+??; w/2+??
 			<br>
 			DjCrowd </h2>
 			<div data-role="fieldcontain">
-				<label for="usernameinput"> Nutzername </label>
+				<label for="usernameinput" id="tests"> Nutzername </label>
 				<input name="" id="usernameinput" placeholder="Hier Nutzernamen eingeben"
 				value="" type="text" onkeyup="check(usernameinput.value,12,usernameinput)">
 			</div>
 			<input value="Get the Party started !" type="submit" onclick="loadhome(usernameinput.value)">
+
+		</div>
+
+		<div id="chat">
+
 		</div>
 
 		<footer data-role="footer" data-position="fixed">
