@@ -10,10 +10,12 @@ function initializeall() {
 
 function loadhome(username) {
 
-	/*TEST:*/var users = new Array();
-	 users.push('Heide');
-	 users.push('Frauberg');
-	 //alert(users);/*:TEST*/
+	/*TEST:*/
+	var users = new Array();
+	users.push('Heide');
+	users.push('Frauberg');
+	alert(users);
+	/*:TEST*/
 	if (username == "") {
 		alert("Bitte einen Nutzernamen eingeben.");
 	} else if (users.indexOf(username) != -1) {
@@ -21,10 +23,12 @@ function loadhome(username) {
 	} else {
 		//alert("yo");
 		/*$("#content").load("home.html", function() {
-		});*/
-		$.get('home.html', function (response){
-			//var myHtml = $('#homecontent', response);
-			$('#content').html(response);
+		 });*/
+		/*$.get('home.html', function (response){
+		 //var myHtml = $('#homecontent', response);
+		 $('#content').html(response);
+		 });*/
+		$("#content").load("home.html", function() {
 		});
 	}
 }
