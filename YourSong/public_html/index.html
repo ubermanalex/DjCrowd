@@ -1,0 +1,39 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<head>
+<title>SongDataBase</title>
+<script type="text/javascript"  src="media.js">
+</script>
+
+</head>
+<body>
+<script> 
+SongDB=new SongDatabase();
+    
+</script>
+<form>
+Interpret: <input type="text" id="interpretsong"><br>
+Titel: <input type="text" id="titlesong"><br>
+</form>
+<button type="button" onClick="SongDB.addSong(interpretsong.value,titlesong.value,0);">Song hinzuf&uumlgen </button>
+<form>
+Hole Song: <input type="text" id="geta"><br>
+Hole Songs vom Interpreten: <input type="text" id="geti"><br>
+</form>
+<button type="button" onclick="SongDB.getSongsBySong(geta.value);">Song holen </button>
+<button type="button" onclick="SongDB.getSongsByInterpret(geti.value);">Songs per Interpreter holen </button><br>
+<textarea id="ergebnisse" style="width:400px; height:200px" >Hier werden die Lieder erscheinen.</textarea>
+
+<form>
+M&oumltest du f&uumlr den ausgew&aumlten Song voten?
+<button type="button" onclick="SongDB.AddVote('blub',1);">Vote </button>
+</form>
+
+
+
+
+</body>
+</HTML>
