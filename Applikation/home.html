@@ -1,21 +1,43 @@
+<html>
+<head>
 <script>
-	
 	function send(str){
-		sock.send(str);
+	sock.send(str);
+	}
+
+	function addsong(){
+	$("#content").load("addsong.html", function() {
+	});
+	}
+		
+	function insertItem(myid,position,newListItem) {
+	var ul = document.getElementById(myid);
+	var li = document.createElement("li");
+	li.innerHTML=newListItem;
+	ul.insertBefore(li, ul.getElementsByTagName("li")[position]);
 	}
 	
+	function vote(){
+		sock.send('VOTE: '+document.getElementById('headeruser').innerHTML+'##test');
+	}
+
 </script>
+</head>
+<body>
+<input value="Nutzername schicken (TODO)" type="submit" onclick="send('USERNAME: '+document.getElementById('headeruser').innerHTML)">
+<input value="Song hinzufügen" type="submit" onclick="addsong()">
 
+<input type='button' value='Insert (TODO)'  onClick="insertItem('songlist',1,'<li>test</li>')">
 
-<input value="Get userarray" type="submit" onclick="send('USERNAME: FFF')">
-<input value="TEST" type="submit" onclick="send('SONG: Fest')">
+<input type='button' value='Vote (TODO)'  onClick="vote()">
 
-
-<ul data-role="listview" data-divider-theme="b" data-inset="true">
+<ul id="songlist" data-role="listview" data-divider-theme="b" data-inset="true">
 	<li data-role="list-divider" role="heading">
 		Crowdlist
 	</li>
-	<li data-theme="c">
+	<!--<li data-theme="c">
 		<a href="#page1" data-transition="slide"> Lied <span class="ui-li-count"> 50 </span> </a>
-	</li>
+	</li>-->
 </ul>
+</body>
+</html>

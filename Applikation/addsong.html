@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script>
+			function reset() {
+				document.getElementById('interpet').value = '';
+				document.getElementById('songtitle').value = '';
+			}
+
+			function send() {
+				sock.send('SONG: ' + interpret.value + '##' + songtitle.value + '##0');
+				$("#content").load("home.html", function() {
+				});
+			}
+
+		</script>
+	</head>
+	<body>
+		<div data-role="fieldcontain">
+			<label for="interpret"> Interpret </label>
+			<input name="" id="interpret" placeholder="Hier Interpret eingeben." value="" type="text">
+		</div>
+		<div data-role="fieldcontain">
+			<label for="songtitle"> Titel </label>
+			<input name="" id="songtitle" placeholder="Hier Songtitel eingeben." value="" type="text">
+		</div>
+		<input value="Song vorschlagen" type="submit" onclick="send()">
+		<input value="Felder resetten" type="submit" onclick="reset()">
+	</body>
+</html>
