@@ -1,7 +1,0 @@
-function check(String, Integer) {
-	var b = checkInputLength(String, Integer);
-	if b {
-		alert("Zeichen auf 30 begrenzt!");
-		eingabe.value = String.substr(0, Integer);
-	}
-}

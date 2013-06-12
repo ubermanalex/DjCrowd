@@ -11,14 +11,4 @@
 		<item value="org.eclipse.rcp:3.7.2.v20120120-1424-9DB5FmnFq5JCf1UA38R-kz0S0272"/>
 		<item value="org.radrails.rails:3.3.0.201304151525-7e-7Q7f5GRKMDENR"/>
 	</list>
-	<section name="SaveAsDialogSettings">
-		<item value="525" key="DIALOG_WIDTH"/>
-		<item value="0" key="DIALOG_Y_ORIGIN"/>
-		<item value="579" key="DIALOG_HEIGHT"/>
-		<item value="338" key="DIALOG_X_ORIGIN"/>
-		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
-	</section>
-	<section name="com.aptana.ui.dialogs.ProjectContentsLocationArea">
-		<item value="C:\Users\Alex\Desktop\Zeug" key="OUTSIDE_LOCATION"/>
-	</section>
 </section>
