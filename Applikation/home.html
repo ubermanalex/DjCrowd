@@ -1,14 +1,19 @@
-<html>
-<head>
 <script>
 	function send(str){
 	sock.send(str);
 	}
 
 	function addsong(){
-	$("#content").load("addsong.html", function() {
-	});
+	
+	interpret = prompt ("Bitte Interpret eingeben.")
+	songtitle = prompt ("Bitte Songtitel eingeben.")
+	
+	send('SONG: '+interpret+'##'+songtitle+'##'+document.getElementById('headeruser').innerHTML)
+	
 	}
+	/*$("#content").load("addsong.html", function() {
+	});
+	}*/
 		
 	function insertItem(myid,position,newListItem) {
 	var ul = document.getElementById(myid);
@@ -18,13 +23,12 @@
 	}
 	
 	function vote(){
-		sock.send('VOTE: '+document.getElementById('headeruser').innerHTML+'##test');
+		sock.send('VOTE: '+document.getElementById('headeruser').innerHTML+'##Kompass ohne Norden');
 	}
 
 </script>
-</head>
-<body>
-<input value="Nutzername schicken (TODO)" type="submit" onclick="send('USERNAME: '+document.getElementById('headeruser').innerHTML)">
+
+
 <input value="Song hinzufügen" type="submit" onclick="addsong()">
 
 <input type='button' value='Insert (TODO)'  onClick="insertItem('songlist',1,'<li>test</li>')">
@@ -39,5 +43,3 @@
 		<a href="#page1" data-transition="slide"> Lied <span class="ui-li-count"> 50 </span> </a>
 	</li>-->
 </ul>
-</body>
-</html>
