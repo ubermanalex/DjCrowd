@@ -22,18 +22,31 @@
 	ul.insertBefore(li, ul.getElementsByTagName("li")[position]);
 	}
 	
+	//TODO:Mehrfachausführung
+	
 	function vote(){
-		sock.send('VOTE: '+document.getElementById('headeruser').innerHTML+'##Kompass ohne Norden');
+		vote = document.getElementById('votecounter').innerHTML;
+		if (vote[7]<1)
+			alert("Du hast keine Votes mehr!");
+		//sock.send('VOTE: '+document.getElementById('headeruser').innerHTML+'##Kompass ohne Norden');
+		newvotecounter = vote[7]-1
+		vote = "Votes: "+newvotecounter+"/3";
+		document.getElementById('votecounter').innerHTML = vote;
 	}
 
 </script>
 
+<h3 id="suggestionablesongs">Suggests: 2/2</h3>
+
+<h3 id="votecounter">Votes: 3/3</h3>
+
+<h3 id="points">Punkte: 0</h3>
 
 <input value="Song hinzufügen" type="submit" onclick="addsong()">
 
-<input type='button' value='Insert (TODO)'  onClick="insertItem('songlist',1,'<li>test</li>')">
+<input type='button' value='Insert (TODO)'  onclick="insertItem('songlist',1,'<li>test</li>')">
 
-<input type='button' value='Vote (TODO)'  onClick="vote()">
+<input type='button' value='Vote (TODO)'  onclick="vote()">
 
 <ul id="songlist" data-role="listview" data-divider-theme="b" data-inset="true">
 	<li data-role="list-divider" role="heading">
