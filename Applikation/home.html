@@ -1,15 +1,25 @@
 <script>
+
+	//TODO:check input
+	//TODO:addsong auf andere seite?
+	//TODO:liste permanent speichern
+	//TODO:jQuery
+	//TODO:backspace und enter in check() (utility.js)
+	
 	function send(str){
 	sock.send(str);
 	}
 
 	function addsong(){
 	
-	interpret = prompt ("Bitte Interpret eingeben.")
-	songtitle = prompt ("Bitte Songtitel eingeben.")
+	interpret = prompt ("Bitte Interpret eingeben.");
+	songtitle = prompt ("Bitte Songtitel eingeben.");
+	song = document.getElementById('headeruser').innerHTML+'##'+interpret+'##'+songtitle;
 	
-	send('SONG: '+interpret+'##'+songtitle+'##'+document.getElementById('headeruser').innerHTML)
-	
+	send('SONG: '+interpret+'##'+songtitle+'##'+document.getElementById('headeruser').innerHTML);
+	//TODO:onMessage Listeneintrag erstellen, onclick vote ausführen
+	//insertItem('songlist',1,'<li data-theme="c"><a href="javascript:vote('+song+')">'+interpret+' - '+songtitle+'</a></li>');
+	insertItem('songlist',1,'<li data-theme="c" onclick="vote('+song+')">'+interpret+" - "+songtitle+'</li>');
 	}
 	/*$("#content").load("addsong.html", function() {
 	});
@@ -24,14 +34,15 @@
 	
 	//TODO:Mehrfachausführung
 	
-	function vote(){
-		vote = document.getElementById('votecounter').innerHTML;
+	function vote(song){
+		/*vote = document.getElementById('votecounter').innerHTML;
 		if (vote[7]<1)
 			alert("Du hast keine Votes mehr!");
-		//sock.send('VOTE: '+document.getElementById('headeruser').innerHTML+'##Kompass ohne Norden');
-		newvotecounter = vote[7]-1
+			return 0*/
+		sock.send('VOTE: '+song);
+		/*newvotecounter = vote[7]-1
 		vote = "Votes: "+newvotecounter+"/3";
-		document.getElementById('votecounter').innerHTML = vote;
+		document.getElementById('votecounter').innerHTML = vote;*/
 	}
 
 </script>
@@ -46,7 +57,7 @@
 
 <input type='button' value='Insert (TODO)'  onclick="insertItem('songlist',1,'<li>test</li>')">
 
-<input type='button' value='Vote (TODO)'  onclick="vote()">
+<input type='button' value='Vote (TODO)'  onclick="vote(document.getElementById('headeruser').innerHTML+'##Bumsi##Gumsi')">
 
 <ul id="songlist" data-role="listview" data-divider-theme="b" data-inset="true">
 	<li data-role="list-divider" role="heading">

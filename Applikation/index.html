@@ -48,21 +48,27 @@ javascript put div at h/2+??; w/2+??
 		function loadhome(username) {
 
 			/*TEST:*/
-			var users = new Array();
+			/*var users = new Array();
 			users.push('Heide');
-			users.push('Frauberg');
+			users.push('Frauberg');*/
 			//alert(users);
 			/*:TEST*/
 			if (username == "") {
 				alert("Bitte einen Nutzernamen eingeben.");
-			} else if (users.indexOf(username) != -1) {
+			} /*else if (users.indexOf(username) != -1) {
 				alert("Nutzername bereits vergeben.");
-			} else {
-
-				document.getElementById('headeruser').innerHTML = username;
-
+			}*/ else {
 				sock.send('USERNAME: '+username);
 
+				//TODO: auf Antwort warten
+				/* x = Antwort
+				 * if (x != "USERNAMEFREE"){
+				 * 	alert ("Nutzername bereits vergeben.");
+				 * return 0;
+				 * }
+				 * 
+				 */
+				document.getElementById('headeruser').innerHTML = username;		
 				$("#content").load("home.html", function() {
 				});
 			}
