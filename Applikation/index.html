@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-javascript read width and height
-css set hX defaultwise
-javascript put div at h/2+??; w/2+??
--->
+
 <head>
 	<meta charset="utf-8"/>
 	<meta author="Gruppe 1"/>
@@ -69,6 +65,12 @@ javascript put div at h/2+??; w/2+??
 				 * 
 				 */
 				document.getElementById('headeruser').innerHTML = username;		
+				
+				/*$.get('home.html', function(data) {
+				$('#content').html(data);
+				alert('Load was performed.');
+				});*/
+				
 				$("#content").load("home.html", function() {
 				});
 			}
@@ -103,21 +105,8 @@ javascript put div at h/2+??; w/2+??
 		<div id="chat">
 
 		</div>
-
-		<footer data-role="footer" data-position="fixed">
-			<nav data-role="navbar">
-				<ul>
-					<li>
-						<a href="#" data-icon="home">home</a>
-					</li>
-					<li>
-						<a href="#" data-icon="gear">options</a>
-					</li>
-					<li>
-						<a href="#" data-icon="info">info</a>
-					</li>
-				</ul>
-			</nav>
+		<footer data-theme="a" data-role="footer" data-position="fixed">
+			<h3>Dj Crowd</h3>
 		</footer>
 	</div>
 </body>
