@@ -12,67 +12,96 @@
 	<meta name="viewpoint" content="width=device-width,initial-scale=1,maximum-scale=1"/>
 	<script>
 		//document.addEventListener("deviceready", onDeviceReady, false);
-		
-         var sock = null;
-         var wsuri = "ws://localhost:9034";
-		
+
+		var sock = null;
+		var wsuri = "ws://localhost:9034";
+
 		window.onload = function() {
- 
-            sock = new WebSocket(wsuri);
- 
-            sock.onopen = function() {
-               console.log("connected to " + wsuri);
-            }
- 
-            sock.onclose = function(e) {
-               console.log("connection closed (" + e.code + ")");
-               document.getElementById('chat').innerHTML+='<br>connection closed (' + e.code + ')';
-            }
- 
-            sock.onmessage = function(e) {
-               console.log("message received: " + e.data);
-               document.getElementById('chat').innerHTML='<br>'+e.data;
-            }
-         };	/*alert("yo");
-			 $("#content").load("home.html", function() {
-			 });
-			 $.get('home.html', function (response){
-			 var myHtml = $('#homecontent', response);
-			 $('#content').html(response);
+
+			sock = new WebSocket(wsuri);
+
+			sock.onopen = function() {
+				console.log("connected to " + wsuri);
+			}
+
+			sock.onclose = function(e) {
+				console.log("connection closed (" + e.code + ")");
+				document.getElementById('chat').innerHTML += '<br>connection closed (' + e.code + ')';
+			}
+
+			sock.onmessage = function(e) {
+				console.log("message received: " + e.data);
+				document.getElementById('chat').innerHTML = '<br>' + e.data;
+				prefix = e.data.substr(0, 7);
+				song = e.data.substring(7, e.data.length);
+				switch (prefix) {
+					case "NAMUSED":
+						alert("Nutzername bereits vergeben!");
+						usernameinput.value = "";
+						break;
+					case "NAMFREE":
+						loadhome();
+						break;
+					case "SONGIND":
+						alert("Dein Vorschlag\n" + song + "\nist bereits\nin der Crowdlist!");
+						break;
+					case "SONGINP":
+						alert("Dein Vorschlag\n"+song+"\nwird vom DJ verarbeitet.");
+						break;
+					case "MAXSONG":
+						alert("Du hast bereits\nzwei Lieder vorgeschlagen.");
+						break;
+					case "MAXVOTE":
+						alert("Du hast momentan\nkeine Votes mehr.")
+						break;
+					case "SONGADD":
+						alert("Glückwunsch!\nDein Vorschlag\n" + song + "\nwurde angenommen.");
+						break;
+					case "SONGRE1":
+						alert("Dein Vorschlag\n" + song + "\nist bereits\nin der Crowdlist!");
+						break;
+					case "SONGRE2":
+						alert("Sorry!\nDer DJ hat deinen Vorschlag\n" + song + "\nleider nicht.");
+						break;
+					case "SONGRE3":
+						alert("Sorry!\nDein Vorschlag\n" + song + "\npasst heute leider nicht.");
+						break;
+					case "SONGBLO":
+						alert("Du wurdest wegen deinem Vorschlag\n" + song + "\ngesperrt!");
+						break;
+					default:
+						break;
+				}
+			}
+		};
+		/*alert("yo");
+		 $("#content").load("home.html", function() {
+		 });
+		 $.get('home.html', function (response){
+		 var myHtml = $('#homecontent', response);
+		 $('#content').html(response);
+		 });*/
+
+		function loadhome() {
+			
+			//TODO:WARUMGEHTHIERNICHT?document.getElementById('headeruser').innerHTML = username;
+			/*$.get('home.html', function(data) {
+			 $('#content').html(data);
+			 alert('Load was performed.');
 			 });*/
 
-		function loadhome(username) {
+			$("#content").load("home.html", function() {
+			});
+			
+		}
 
-			/*TEST:*/
-			/*var users = new Array();
-			users.push('Heide');
-			users.push('Frauberg');*/
-			//alert(users);
-			/*:TEST*/
+		function senduser(username) {
+			document.getElementById('headeruser').innerHTML = username;
+
 			if (username == "") {
 				alert("Bitte einen Nutzernamen eingeben.");
-			} /*else if (users.indexOf(username) != -1) {
-				alert("Nutzername bereits vergeben.");
-			}*/ else {
-				sock.send('USERNAME: '+username);
-
-				//TODO: auf Antwort warten
-				/* x = Antwort
-				 * if (x != "USERNAMEFREE"){
-				 * 	alert ("Nutzername bereits vergeben.");
-				 * return 0;
-				 * }
-				 * 
-				 */
-				document.getElementById('headeruser').innerHTML = username;		
-				
-				/*$.get('home.html', function(data) {
-				$('#content').html(data);
-				alert('Load was performed.');
-				});*/
-				
-				$("#content").load("home.html", function() {
-				});
+			} else {
+				sock.send('USERNAME: ' + username);
 			}
 
 		}
@@ -98,7 +127,7 @@
 				<input name="" id="usernameinput" placeholder="Hier Nutzernamen eingeben"
 				value="" type="text" onkeyup="check(usernameinput.value,12,usernameinput)">
 			</div>
-			<input value="Get the Party started !" type="submit" onclick="loadhome(usernameinput.value)">
+			<input value="Get the Party started !" type="submit" onclick="senduser(usernameinput.value)">
 
 		</div>
 
