@@ -17,7 +17,15 @@
 	function addsong(){
 	
 	interpret = prompt ("Bitte Interpret eingeben.");
+			while (interpret.length < 2 || interpret.length > 20)
+				{
+					interpret = prompt("Bitte minimal 2, maximal 20 Zeichen angeben.");
+				}
 	songtitle = prompt ("Bitte Songtitel eingeben.");
+			while (songtitle.length < 2 || songtitle.length > 50)
+				{
+					songtitle = prompt("Bitte minimal 2, maximal 50 Zeichen angeben.");
+				}
 	song = document.getElementById('headeruser').innerHTML+'##'+interpret+'##'+songtitle;
 	
 	send('SONG: '+interpret+'##'+songtitle+'##'+document.getElementById('headeruser').innerHTML);
@@ -61,7 +69,7 @@
 
 <input type='button' value='Insert (TODO)'  onclick="insertItem('songlist',1,'<li>test</li>')">
 
-<input type='button' value='Vote (TODO)'  onclick="vote(document.getElementById('headeruser').innerHTML+'##Hallo##Welt')">
+<input type='button' value='Vote (TODO)'  onclick="vote(document.getElementById('headeruser').innerHTML+'##Rallo##Welt')">
 
 <ul id="songlist" data-role="listview" data-divider-theme="b" data-inset="true">
 	<li data-role="list-divider" role="heading">

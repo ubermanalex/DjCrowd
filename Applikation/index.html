@@ -33,7 +33,7 @@
 				console.log("message received: " + e.data);
 				document.getElementById('chat').innerHTML = '<br>' + e.data;
 				prefix = e.data.substr(0, 7);
-				song = e.data.substring(7, e.data.length);
+				data = e.data.substring(7, e.data.length);
 				switch (prefix) {
 					case "NAMUSED":
 						alert("Nutzername bereits vergeben!");
@@ -43,13 +43,13 @@
 						loadhome();
 						break;
 					case "SONGIND":
-						alert("Dein Vorschlag\n" + song + "\nist bereits\nin der Crowdlist!");
+						alert("Dein Vorschlag\n" + data + "\nist bereits\nin der Crowdlist!");
 						break;
 					case "SONGINP":
-						alert("Dein Vorschlag\n"+song+"\nwird vom DJ verarbeitet.");
+						alert("Dein Vorschlag\n"+data+"\nwird vom DJ verarbeitet.");
 						break;
 					case "SONGINR":
-						alert("Dein Vorschlag\n"+song+"\nwurde bereits abgelehnt.");
+						alert("Dein Vorschlag\n"+data+"\nwurde bereits abgelehnt.");
 						break;
 					case "MAXSONG":
 						alert("Du hast bereits\nzwei Lieder vorgeschlagen.");
@@ -58,20 +58,25 @@
 						alert("Du hast momentan\nkeine Votes mehr.")
 						break;
 					case "SONGADD":
-						alert("Glückwunsch!\nDein Vorschlag\n" + song + "\nwurde angenommen.");
+						alert("Glückwunsch!\nDein Vorschlag\n" + data + "\nwurde angenommen.");
 						break;
 					case "SONGRE1":
-						alert("Dein Vorschlag\n" + song + "\nist bereits\nin der Crowdlist!");
+						alert("Dein Vorschlag\n" + data + "\nist bereits\nin der Crowdlist!");
 						break;
 					case "SONGRE2":
-						alert("Sorry!\nDer DJ hat deinen Vorschlag\n" + song + "\nleider nicht.");
+						alert("Sorry!\nDer DJ hat deinen Vorschlag\n" + data + "\nleider nicht.");
 						break;
 					case "SONGRE3":
-						alert("Sorry!\nDein Vorschlag\n" + song + "\npasst heute leider nicht.");
+						alert("Sorry!\nDein Vorschlag\n" + data + "\npasst heute leider nicht.");
 						break;
 					case "SONGBLO":
-						alert("Du wurdest wegen deinem Vorschlag\n" + song + "\ngesperrt!");
+						alert("Du wurdest wegen deinem Vorschlag\n" + data + "\ngesperrt!");
 						break;
+					case "POINTGR":
+						alert("Glückwunsch!\nDu hast\n"+data+" Punkte erhalten!")
+					case "USEREXI":
+						loadhome();
+						document.getElementById('headeruser').innerHTML = data;
 					default:
 						break;
 				}
