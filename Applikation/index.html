@@ -72,21 +72,15 @@
 					case "SONGBLO":
 						alert("Du wurdest wegen deinem Vorschlag\n" + data + "\ngesperrt!");
 						break;
+					case "USERBLC":
+						alert("Du wurdest vom DJ gesperrt!");
+						break;
 					case "POINTGR":
 						alert("Glückwunsch!\nDu hast\n"+data+" Punkte erhalten!");
 						break;
 					case "USEREXI":
 						loadhome();
 						document.getElementById('headeruser').innerHTML = data;
-						break;
-					case "ACTVOTE":
-						newVote(data);
-						break;
-					case "ACTSUGG":
-						newSuggests(data);
-						break;
-					case "POINTCO":
-						newPunkte(data);
 						break;
 					default:
 						break;
@@ -108,9 +102,7 @@
 			 $('#content').html(data);
 			 alert('Load was performed.');
 			 });*/
-			newVote(3);
-			newSuggests(2);
-			newPunkte(0);
+
 			$("#content").load("home.html", function() {
 			});
 			
@@ -126,26 +118,6 @@
 			}
 
 		}
-		
-		function newVote(data){
-			newvotecount = data;
-			vote = "Votes: "+newvotecount+"/3";
-			document.getElementById('votecounter').innerHTML = vote;
-		}
-		
-		function newSuggests(data){
-			newsuggestions = data;
-			suggestions = "Suggests: "+newsuggestions+"/2";
-			document.getElementById('suggestionablesongs').innerHTML = suggestions;
-		}
-		
-		function newPunkte(data){
-			alert('Hallo');
-			newPunkte = data;
-			Punkte = "Punkte: "+newPunkte;
-			document.getElementById('points').innerHTML = Punkte;		
-		}
-
 	</script>
 </head>
 
@@ -158,12 +130,7 @@
 				<h3 id="headeruser"> DjCrowd </h3>
 			</div>
 		</header>
-		<h3 id="suggestionablesongs"></h3>
 
-		<h3 id="votecounter"></h3>
-
-		<h3 id="points"></h3>
-		
 		<div data-role="content" id="content">
 			<h2> Willkommen bei
 			<br>
