@@ -4,11 +4,6 @@
 
 <script>
 
-	//TODO:check input
-	//TODO:addsong auf andere seite?
-	//TODO:liste permanent speichern
-	//TODO:jQuery
-	//TODO:backspace und enter in check() (utility.js)
 
 	function send(str){
 	sock.send(str);
@@ -29,13 +24,9 @@
 	song = document.getElementById('headeruser').innerHTML+'##'+interpret+'##'+songtitle;
 	
 	send('SONG: '+interpret+'##'+songtitle+'##'+document.getElementById('headeruser').innerHTML);
-	//TODO:onMessage Listeneintrag erstellen, onclick vote ausführen
-	//insertItem('songlist',1,'<li data-theme="c"><a href="javascript:vote('+song+')">'+interpret+' - '+songtitle+'</a></li>');
 	insertItem('songlist',1,'<li data-theme="c" onclick="vote('+song+')">'+interpret+" - "+songtitle+'</li>');
 	}
-	/*$("#content").load("addsong.html", function() {
-	});
-	}*/
+
 		
 	function insertItem(myid,position,newListItem) {
 	var ul = document.getElementById(myid);
@@ -44,26 +35,12 @@
 	ul.insertBefore(li, ul.getElementsByTagName("li")[position]);
 	}
 	
-	//TODO:Mehrfachausführung
 	
 	function vote(song){
-		/*vote = document.getElementById('votecounter').innerHTML;
-		if (vote[7]<1)
-			alert("Du hast keine Votes mehr!");
-			return 0*/
 		sock.send('VOTE: '+song);
-		/*newvotecounter = vote[7]-1
-		vote = "Votes: "+newvotecounter+"/3";
-		document.getElementById('votecounter').innerHTML = vote;*/
 	}
 
 </script>
-
-<h3 id="suggestionablesongs">Suggests: 2/2</h3>
-
-<h3 id="votecounter">Votes: 3/3</h3>
-
-<h3 id="points">Punkte: 0</h3>
 
 <input value="Song hinzufügen" type="submit" onclick="addsong()">
 
@@ -75,7 +52,4 @@
 	<li data-role="list-divider" role="heading">
 		Crowdlist
 	</li>
-	<!--<li data-theme="c">
-		<a href="#page1" data-transition="slide"> Lied <span class="ui-li-count"> 50 </span> </a>
-	</li>-->
 </ul>

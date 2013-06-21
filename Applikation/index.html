@@ -11,7 +11,7 @@
 	<script type="text/javascript" src="utility.js"></script>
 	<meta name="viewpoint" content="width=device-width,initial-scale=1,maximum-scale=1"/>
 	<script>
-		//document.addEventListener("deviceready", onDeviceReady, false);
+		
 
 		var sock = null;
 		var wsuri = "ws://localhost:9034";
@@ -82,27 +82,26 @@
 						loadhome();
 						document.getElementById('headeruser').innerHTML = data;
 						break;
+					case "ACTSUGG":
+						newSuggests(data);
+						break;
+					case "POINTCO":
+						neuePunkte(data);
+						break;
+					case "ACTVOTE":
+						neueVotes(data);
+						break;
 					default:
 						break;
 				}
 			}
 		};
-		/*alert("yo");
-		 $("#content").load("home.html", function() {
-		 });
-		 $.get('home.html', function (response){
-		 var myHtml = $('#homecontent', response);
-		 $('#content').html(response);
-		 });*/
 
 		function loadhome() {
 			
-			//TODO:WARUMGEHTHIERNICHT?document.getElementById('headeruser').innerHTML = username;
-			/*$.get('home.html', function(data) {
-			 $('#content').html(data);
-			 alert('Load was performed.');
-			 });*/
-
+			newVote(3);
+			newPunkte(89);
+			newSuggests(2);
 			$("#content").load("home.html", function() {
 			});
 			
@@ -118,6 +117,35 @@
 			}
 
 		}
+		
+		function newSuggests(data){
+			newsuggestions = data;
+			suggestions = "Suggests: "+newsuggestions+"/2";
+			document.getElementById('suggestionablesongs').innerHTML = suggestions;
+		}
+		
+		function newPunkte(data){
+			newPunkte = data;
+			Punkte = "Punkte: "+newPunkte;
+			document.getElementById('points').innerHTML = Punkte;		
+		}
+		
+		function neuePunkte(data){
+			Punkte = "Punkte: "+data;
+			document.getElementById('points').innerHTML = Punkte;
+		}
+		
+		function newVote(data){
+			newvotecount = data;
+			vote = "Votes: "+newvotecount+"/3";
+			document.getElementById('votecounter').innerHTML = vote;
+		}
+		
+		function neueVotes(data){
+			newvotes = data;
+			votes = "Vote: "+newvotes+"/3";
+			document.getElementById('votecounter').innerHTML = votes;
+		}
 	</script>
 </head>
 
@@ -130,7 +158,13 @@
 				<h3 id="headeruser"> DjCrowd </h3>
 			</div>
 		</header>
+		
+		<h3 id="suggestionablesongs"></h3>
 
+		<h3 id="votecounter"></h3>
+
+		<h3 id="points"></h3>
+		
 		<div data-role="content" id="content">
 			<h2> Willkommen bei
 			<br>
