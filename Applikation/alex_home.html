@@ -1,0 +1,98 @@
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+
+<script>
+
+	//TODO:check input
+	//TODO:addsong auf andere seite?
+	//TODO:liste permanent speichern
+	//TODO:jQuery
+	//TODO:backspace und enter in check() (utility.js)
+
+	function send(str){
+	sock.send(str);
+	}
+
+	function addsong(){
+	
+	interpret = prompt ("Bitte Interpret eingeben.");
+			while (interpret.length < 2 || interpret.length > 20)
+				{
+					interpret = prompt("Bitte minimal 2, maximal 20 Zeichen angeben.");
+				}
+	songtitle = prompt ("Bitte Songtitel eingeben.");
+			while (songtitle.length < 2 || songtitle.length > 50)
+				{
+					songtitle = prompt("Bitte minimal 2, maximal 50 Zeichen angeben.");
+				}
+	song = document.getElementById('headeruser').innerHTML+'##'+interpret+'##'+songtitle;
+	
+	send('SONG: '+interpret+'##'+songtitle+'##'+document.getElementById('headeruser').innerHTML);
+	//TODO:onMessage Listeneintrag erstellen, onclick vote ausführen
+	//insertItem('songlist',1,'<li data-theme="c"><a href="javascript:vote('+song+')">'+interpret+' - '+songtitle+'</a></li>');
+	insertItem('songlist',1,'<li data-theme="c" onclick="vote('+song+')">'+interpret+" - "+songtitle+'</li>');
+	}
+	/*$("#content").load("addsong.html", function() {
+	});
+	}*/
+		
+	function add_li(list, text) {
+		var list = document.getElementById(list);
+		var li = document.createElement("li");
+		li.innerHTML = text;
+		list.appendChild(li);
+	}
+
+	function load_list(list, list_array) {
+		for (var i = 0; i < list_array.length; i++) {
+			xxx = list_array[i].split('##');
+			x = document.getElementById('headeruser').innerHTML+'##'+xxx[0]+'##'+xxx[1];
+			add_li(list, "<a href='javascript: vote(x)'>"+list_array[i]+"</a>");
+		}
+	}
+	
+	function clear_list (list) { 
+	var list = document.getElementById(list); 
+	while( list.hasChildNodes() ) { 
+	list.removeChild( list.lastChild ); } 
+	} 
+
+	
+	//TODO:Mehrfachausführung
+	
+	function vote(song){
+		/*vote = document.getElementById('votecounter').innerHTML;
+		if (vote[7]<1)
+			alert("Du hast keine Votes mehr!");
+			return 0*/
+		alert("YO");
+		alert(song);
+		sock.send('VOTE: '+song);
+		/*newvotecounter = vote[7]-1
+		vote = "Votes: "+newvotecounter+"/3";
+		document.getElementById('votecounter').innerHTML = vote;*/
+	}
+
+</script>
+
+<h3 id="suggestionablesongs">Suggests: 2/2</h3>
+
+<h3 id="votecounter">Votes: 3/3</h3>
+
+<h3 id="points">Punkte: 0</h3>
+
+<input value="Song hinzufügen" type="submit" onclick="addsong()">
+
+<input type='button' value='Insert (TODO)'  onclick="insertItem('songlist',1,'<li>test</li>')">
+
+<input type='button' value='Vote (TODO)'  onclick="vote(document.getElementById('headeruser').innerHTML+'##Rallo##Welt')">
+
+<ul id="songlist" data-role="listview" data-divider-theme="b" data-inset="true">
+	<li data-role="list-divider" role="heading">
+		Crowdlist
+	</li>
+	<!--<li data-theme="c">
+		<a href="#page1" data-transition="slide"> Lied <span class="ui-li-count"> 50 </span> </a>
+	</li>-->
+</ul>
