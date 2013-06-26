@@ -24,8 +24,30 @@
 	song = document.getElementById('headeruser').innerHTML+'##'+interpret+'##'+songtitle;
 	
 	send('SONG: '+interpret+'##'+songtitle+'##'+document.getElementById('headeruser').innerHTML);
-	insertItem('songlist',1,'<li data-theme="c" onclick="vote('+song+')">'+interpret+" - "+songtitle+'</li>');
+	//insertItem('songlist',1,'<li data-theme="c" onclick="vote('+song+')">'+interpret+" - "+songtitle+'</li>');
 	}
+	
+	function add_li(list, text) {
+		var list = document.getElementById(list);
+		var li = document.createElement("li");
+		li.innerHTML = text;
+		list.appendChild(li);
+	}
+
+	function load_list(list, list_array) {
+		//add_li(list, "<data-role="list-divider" role="heading"> Crowdlist>")
+		for (var i = 0; i < list_array.length; i++) {
+			xxx = list_array[i].split('##');
+			x = document.getElementById('headeruser').innerHTML+'##'+xxx[0]+'##'+xxx[1];
+			add_li(list, "<a href='javascript: vote(x)'>"+list_array[i]+"</a>");
+		}
+	}
+	
+	function clear_list (list) { 
+	var list = document.getElementById(list); 
+	while( list.hasChildNodes() ) { 
+	list.removeChild( list.lastChild ); } 
+	} 
 
 		
 	function insertItem(myid,position,newListItem) {
@@ -37,7 +59,11 @@
 	
 	
 	function vote(song){
-		sock.send('VOTE: '+song);
+		var String = song.split('##');
+		var answear = confirm("Für  '" +String[1]+" - "+String[2]+ "'  voten?");
+		if (answear){
+			sock.send('VOTE: '+song);}
+		
 	}
 
 </script>

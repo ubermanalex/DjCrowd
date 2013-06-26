@@ -31,7 +31,7 @@
 
 			sock.onmessage = function(e) {
 				console.log("message received: " + e.data);
-				document.getElementById('chat').innerHTML = '<br>' + e.data;
+				document.getElementById('chat').innerHTML += '<br>' + e.data;
 				prefix = e.data.substr(0, 7);
 				data = e.data.substring(7, e.data.length);
 				switch (prefix) {
@@ -55,7 +55,7 @@
 						alert("Du hast bereits\nzwei Lieder vorgeschlagen.");
 						break;
 					case "MAXVOTE":
-						alert("Du hast momentan\nkeine Votes mehr.\nIn" + data + "erhälst du drei neue Votes");
+						alert("Du hast momentan\nkeine Votes mehr.\nIn " + data + " erhälst du drei neue Votes");
 						break;
 					case "SONGADD":
 						alert("Glückwunsch!\nDein Vorschlag\n" + data + "\nwurde angenommen.");
@@ -71,6 +71,7 @@
 						break;
 					case "SONGBLO":
 						alert("Du wurdest wegen deinem Vorschlag\n" + data + "\ngesperrt!");
+						newSuggests(0);
 						break;
 					case "USERBLC":
 						alert("Du wurdest vom DJ gesperrt!");
@@ -91,6 +92,14 @@
 					case "ACTVOTE":
 						neueVotes(data);
 						break;
+					case "SONGDB1":
+						$("#content").load("home.html", function(){
+						splitdata = data.split('!#!');
+						clear_list('songlist');
+						add_li('songlist', '<data-role="list-divider" role="heading"> Crowdlist');
+						load_list('songlist',splitdata);
+						});
+						break;
 					default:
 						break;
 				}
@@ -101,10 +110,7 @@
 			
 			newVote(3);
 			newPunkte(0);
-			newSuggests(2);
-			$("#content").load("home.html", function() {
-			});
-			
+			newSuggests(2);			
 		}
 
 		function senduser(username) {
