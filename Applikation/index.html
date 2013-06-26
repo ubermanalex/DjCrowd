@@ -94,10 +94,12 @@
 						break;
 					case "SONGDB1":
 						$("#content").load("home.html", function(){
+						var nichtleer = data;
 						splitdata = data.split('!#!');
 						clear_list('songlist');
-						add_li('songlist', '<data-role="list-divider" role="heading"> Crowdlist');
-						load_list('songlist',splitdata);
+						add_li('songlist', '<data-role="list-divider" role="heading" data-divider-theme="e" data-theme="e"> Crowdlist');
+						if (nichtleer){
+							load_list('songlist',splitdata);}
 						});
 						break;
 					default:
