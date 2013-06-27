@@ -12,10 +12,10 @@
 	<meta name="viewpoint" content="width=device-width,initial-scale=1,maximum-scale=1"/>
 	<script>
 		
-		//Initalisiert das Websocket
+
 		var sock = null;
-		//var wsuri = "ws://localhost:9034";
-		var wsuri = "ws://192.168.2.102:9034";
+		var wsuri = "ws://localhost:9034";
+		//var wsuri = "ws://80.134.204.186:9034";
 		window.onload = function() {
 
 			sock = new WebSocket(wsuri);
@@ -28,7 +28,7 @@
 				console.log("connection closed (" + e.code + ")");
 				document.getElementById('chat').innerHTML += '<br>connection closed (' + e.code + ')';
 			}
-			//reagiert auf Narichten des Servers und führt die entsprechenden Funktionen aus
+
 			sock.onmessage = function(e) {
 				console.log("message received: " + e.data);
 				document.getElementById('chat').innerHTML += '<br>' + e.data;
@@ -75,7 +75,6 @@
 						break;
 					case "USERBLC":
 						alert("Du wurdest vom DJ gesperrt!");
-						newSuggests(0);
 						break;
 					case "POINTGR":
 						alert("Glückwunsch!\nDu hast\n"+data+" Punkte erhalten!");
@@ -93,9 +92,6 @@
 					case "ACTVOTE":
 						neueVotes(data);
 						break;
-					case "ACTVOT3":
-						alert("Du hast jetzt wieder 3 Votes zu verfügung.");
-						neueVotes(data);
 					case "SONGDB1":
 						$("#content").load("home.html", function(){
 						var nichtleer = data;
@@ -112,14 +108,13 @@
 			}
 		};
 		
-		//lädt beim wechseln der Seite die Initalen Werte für die Votes, Punkte und Vorschläge
 		function loadhome(){
 		
 			newVote(3);
 			newPunkte(0);
 			newSuggests(2);
 		}
-		//Sendet den Usernamen und prüft, ob der User einen Usernamen gesetzt hat
+
 		function senduser(username) {
 			document.getElementById('headeruser').innerHTML = username;
 
@@ -130,30 +125,30 @@
 			}
 
 		}
-		//verarbeitet die aktuelle Anzahl an Vorschlägen, die vom Server übergeben werden
+		
 		function newSuggests(data){
 			newsuggestions = data;
 			suggestions = "&nbsp"+"&nbsp"+"&nbsp"+"Suggests: "+newsuggestions+"/2"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
 			document.getElementById('suggestionablesongs').innerHTML = suggestions;
 		}
-		//verarbeitet die aktuelle Anzahl an Punkten, die initial gesetzt werden
+		
 		function newPunkte(data){
 			newPunkte = data;
 			Punkte = "Punkte: "+newPunkte;
 			document.getElementById('points').innerHTML = Punkte;		
 		}
-		//verarbeitet die aktuelle Anzahl an Punkten, die vom Server übergeben werden
+		
 		function neuePunkte(data){
 			Punkte = "Punkte: "+data;
 			document.getElementById('points').innerHTML = Punkte;
 		}
-		//verarbeitet die aktuelle Anzahl an Votes, die initial gesetzt werden
+		
 		function newVote(data){
 			newvotecount = data;
 			vote = "Votes: "+newvotecount+"/3"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
 			document.getElementById('votecounter').innerHTML = vote;
 		}
-		///verarbeitet die aktuelle Anzahl an Votes, die vom Server übergeben werden
+		
 		function neueVotes(data){
 			newvotes = data;
 			votes = "Votes: "+newvotes+"/3"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
@@ -165,19 +160,19 @@
 <body>
 
 	<div data-role="page" id="index">
-		<!-- erstellt den Header am Anfang-->
+
 		<header>
 			<div data-theme="a" data-role="header" id="header">
 				<h3 id="headeruser"> DjCrowd </h3>
 			</div>
 		</header>
-		<!-- die Texte für Votes, Punkte und Suggestions. Am Anfang sind sie unsichtbar-->
+		
 		<h3 id="suggestionablesongs" style="float:left">  </h3>
 
 		<h3 id="votecounter" style="float:left"></h3>
 
 		<h3 id="points" ></h3>
-		<!-- Html Teil, der den Nutzer begrüßt und das Eingabefeld erstellt-->
+
 		<div data-role="content" id="content">
 			<h2> Willkommen bei
 			<br>
@@ -194,7 +189,6 @@
 		<div id="chat">
 
 		</div>
-		<!-- erstellt den Footer-->
 		<footer data-theme="a" data-role="footer" data-position="fixed">
 			<h3>Dj Crowd</h3>
 		</footer>
