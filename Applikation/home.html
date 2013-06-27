@@ -49,7 +49,8 @@
 		for (var i = 0; i < list_array.length; i++) {
 			xxx = list_array[i].split('##');
 			x = document.getElementById('headeruser').innerHTML+'##'+xxx[0]+'##'+xxx[1];
-			add_li(list, "<a href='javascript: vote("+"x"+")'>"+xxx[0]+"!#!"+xxx[1]+"!#!"+xxx[2]+"</a>");
+			s = 'javascript: vote("'+x+'")'
+			add_li(list, "<a href='"+s+"'>"+xxx[0]+"!#!"+xxx[1]+"!#!"+xxx[2]+"</a>");
 		}
 	}
 	//löscht die aktuelle Liste
