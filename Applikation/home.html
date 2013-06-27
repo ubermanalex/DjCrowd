@@ -32,7 +32,7 @@
 	function add_li(list, text) {
 		var list = document.getElementById(list);
 		var li = document.createElement("li");
-		var a = text.split('##');
+		var a = text.split('!#!');
 		if (a[1] && a[2]){
 		li.innerHTML = a[0] +" - "+ a[1] + '<span class="ui-li-count">'+ a[2]+ '</span>' ;
 		 //<span class="ui-li-count">
@@ -49,7 +49,7 @@
 		for (var i = 0; i < list_array.length; i++) {
 			xxx = list_array[i].split('##');
 			x = document.getElementById('headeruser').innerHTML+'##'+xxx[0]+'##'+xxx[1];
-			add_li(list, "<a href='javascript: vote(x)'>"+list_array[i]+"</a>");
+			add_li(list, "<a href='javascript: vote("+"x"+")'>"+xxx[0]+"!#!"+xxx[1]+"!#!"+xxx[2]+"</a>");
 		}
 	}
 	//löscht die aktuelle Liste
@@ -69,8 +69,8 @@
 	
 	//Fragt ab, ob man wirklich für den Song voten will und schickt(wenn ja) dies an den Server
 	function vote(song){
-		var String = song.split('##');
-		var answear = confirm("Für  '" +String[1]+" - "+String[2]+ "'  voten?");
+		var neuersong = song.split('##');
+		var answear = confirm("Für  '" +neuersong[1]+" - "+neuersong[2]+ "'  voten?");
 		if (answear){
 			sock.send('VOTE: '+song);}
 		
