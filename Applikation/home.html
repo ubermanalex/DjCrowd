@@ -5,10 +5,12 @@
 <script>
 
 
+	//sendet Inhalt str an den Server
 	function send(str){
 	sock.send(str);
 	}
-
+	
+	//Öffnet Textboxen zur Eingabe und schickt den Song an den Server
 	function addsong(){
 	
 	interpret = prompt ("Bitte Interpret eingeben.");
@@ -26,7 +28,7 @@
 	send('SONG: '+interpret+'##'+songtitle+'##'+document.getElementById('headeruser').innerHTML);
 	//insertItem('songlist',1,'<li data-theme="c" onclick="vote('+song+')">'+interpret+" - "+songtitle+'</li>');
 	}
-	
+	//Hängt ein neues Element an die Liste an 
 	function add_li(list, text) {
 		var list = document.getElementById(list);
 		var li = document.createElement("li");
@@ -41,7 +43,7 @@
 		else {	li.innerHTML = a[0];
 				list.appendChild(li);}
 	}
-
+	//lädt die liste neu
 	function load_list(list, list_array) {
 		//add_li(list, "<data-role="list-divider" role="heading"> Crowdlist>")
 		for (var i = 0; i < list_array.length; i++) {
@@ -50,14 +52,14 @@
 			add_li(list, "<a href='javascript: vote("+"x"+")'>"+xxx[0]+"!#!"+xxx[1]+"!#!"+xxx[2]+"</a>");
 		}
 	}
-	
+	//löscht die aktuelle Liste
 	function clear_list (list) { 
 	var list = document.getElementById(list); 
 	while( list.hasChildNodes() ) { 
 	list.removeChild( list.lastChild ); } 
 	} 
 
-		
+	//fügt ein neues Element ein	
 	function insertItem(myid,position,newListItem) {
 	var ul = document.getElementById(myid);
 	var li = document.createElement("li");
@@ -65,7 +67,7 @@
 	ul.insertBefore(li, ul.getElementsByTagName("li")[position]);
 	}
 	
-	
+	//Fragt ab, ob man wirklich für den Song voten will und schickt(wenn ja) dies an den Server
 	function vote(song){
 		var neuersong = song.split('##');
 		var answear = confirm("Für  '" +neuersong[1]+" - "+neuersong[2]+ "'  voten?");
@@ -75,9 +77,9 @@
 	}
 
 </script>
-
+<!-- Button um einen Song hinzuzufügen-->
 <input value="Song hinzufügen" type="submit" data-role="button" onclick="addsong()">
-
+<!-- Crowdliste in der die Lieder zum Voten stehen-->
 <ul id="songlist" data-role="listview" data-divider-theme="b" data-inset="true" data-icon="check">
 	<li data-role="list-divider" role="heading">
 		Crowdlist
