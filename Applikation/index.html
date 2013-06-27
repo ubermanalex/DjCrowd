@@ -15,7 +15,7 @@
 
 		var sock = null;
 		var wsuri = "ws://localhost:9034";
-
+		//var wsuri = "ws://80.134.204.186:9034";
 		window.onload = function() {
 
 			sock = new WebSocket(wsuri);
@@ -97,7 +97,7 @@
 						var nichtleer = data;
 						splitdata = data.split('!#!');
 						clear_list('songlist');
-						add_li('songlist', '<data-role="list-divider" role="heading" data-divider-theme="e" data-theme="e"> Crowdlist');
+						add_li('songlist', '<data-role="list-divider" role="heading"> Crowdlist');
 						if (nichtleer){
 							load_list('songlist',splitdata);}
 						});
@@ -107,12 +107,12 @@
 				}
 			}
 		};
-
-		function loadhome() {
-			
+		
+		function loadhome(){
+		
 			newVote(3);
 			newPunkte(0);
-			newSuggests(2);			
+			newSuggests(2);
 		}
 
 		function senduser(username) {
@@ -128,7 +128,7 @@
 		
 		function newSuggests(data){
 			newsuggestions = data;
-			suggestions = "Suggests: "+newsuggestions+"/2";
+			suggestions = "&nbsp"+"&nbsp"+"&nbsp"+"Suggests: "+newsuggestions+"/2"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
 			document.getElementById('suggestionablesongs').innerHTML = suggestions;
 		}
 		
@@ -145,13 +145,13 @@
 		
 		function newVote(data){
 			newvotecount = data;
-			vote = "Votes: "+newvotecount+"/3";
+			vote = "Votes: "+newvotecount+"/3"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
 			document.getElementById('votecounter').innerHTML = vote;
 		}
 		
 		function neueVotes(data){
 			newvotes = data;
-			votes = "Votes: "+newvotes+"/3";
+			votes = "Votes: "+newvotes+"/3"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
 			document.getElementById('votecounter').innerHTML = votes;
 		}
 	</script>
@@ -167,12 +167,12 @@
 			</div>
 		</header>
 		
-		<h3 id="suggestionablesongs"></h3>
+		<h3 id="suggestionablesongs" style="float:left">  </h3>
 
-		<h3 id="votecounter"></h3>
+		<h3 id="votecounter" style="float:left"></h3>
 
-		<h3 id="points"></h3>
-		
+		<h3 id="points" ></h3>
+
 		<div data-role="content" id="content">
 			<h2> Willkommen bei
 			<br>

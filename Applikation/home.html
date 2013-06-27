@@ -30,8 +30,16 @@
 	function add_li(list, text) {
 		var list = document.getElementById(list);
 		var li = document.createElement("li");
-		li.innerHTML = text;
-		list.appendChild(li);
+		var a = text.split('##');
+		if (a[1] && a[2]){
+		li.innerHTML = a[0] +" - "+ a[1] + '<span class="ui-li-count">'+ a[2]+ '</span>' ;
+		 //<span class="ui-li-count">
+                      //  jdfe
+                    //</span>
+		list.appendChild(li);}
+		//}
+		else {	li.innerHTML = a[0];
+				list.appendChild(li);}
 	}
 
 	function load_list(list, list_array) {
@@ -68,9 +76,9 @@
 
 </script>
 
-<input value="Song hinzufügen" type="submit" onclick="addsong()">
+<input value="Song hinzufügen" type="submit" data-role="button" onclick="addsong()">
 
-<ul id="songlist" data-role="listview" data-divider-theme="b" data-inset="true">
+<ul id="songlist" data-role="listview" data-divider-theme="b" data-inset="true" data-icon="check">
 	<li data-role="list-divider" role="heading">
 		Crowdlist
 	</li>
