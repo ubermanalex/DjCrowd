@@ -38,7 +38,14 @@
 		 //<span class="ui-li-count">
                       //  jdfe
                     //</span>
-		list.appendChild(li);}
+        li.onclick=function(){
+        	var answear = confirm("Für  '" +a[0]+" - "+a[1]+ "'  voten?");
+		if (answear){
+			sock.send('VOTE: '+document.getElementById('headeruser').innerHTML+'##'+a[0]+'##'+a[1]);}
+			
+        }
+        list.appendChild(li);
+		}
 		//}
 		else {	li.innerHTML = a[0];
 				list.appendChild(li);}
@@ -50,7 +57,7 @@
 			xxx = list_array[i].split('##');
 			x = document.getElementById('headeruser').innerHTML+'##'+xxx[0]+'##'+xxx[1];
 			s = 'javascript: vote("'+x+'")'
-			add_li(list, "<a href='"+s+"'>"+xxx[0]+"!#!"+xxx[1]+"!#!"+xxx[2]+"</a>");
+			add_li(list, /*"<a href='"+s+"'>"+*/xxx[0]+"!#!"+xxx[1]+"!#!"+xxx[2]/*+"</a>"*/);
 		}
 	}
 	//löscht die aktuelle Liste
@@ -69,11 +76,12 @@
 	}
 	
 	//Fragt ab, ob man wirklich für den Song voten will und schickt(wenn ja) dies an den Server
-	function vote(song){
-		var neuersong = song.split('##');
+	function vote(){
+		alert("Hallo.");
+		/*var neuersong = song.split('##');
 		var answear = confirm("Für  '" +neuersong[1]+" - "+neuersong[2]+ "'  voten?");
 		if (answear){
-			sock.send('VOTE: '+song);}
+			sock.send('VOTE: '+song);}*/
 		
 	}
 
