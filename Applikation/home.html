@@ -38,6 +38,7 @@
 		 //<span class="ui-li-count">
                       //  jdfe
                     //</span>
+        a[0] = a[0].split(">")[1];
         li.onclick=function(){
         	var answear = confirm("Für  '" +a[0]+" - "+a[1]+ "'  voten?");
 		if (answear){
@@ -57,7 +58,7 @@
 			xxx = list_array[i].split('##');
 			x = document.getElementById('headeruser').innerHTML+'##'+xxx[0]+'##'+xxx[1];
 			s = 'javascript: vote("'+x+'")'
-			add_li(list, /*"<a href='"+s+"'>"+*/xxx[0]+"!#!"+xxx[1]+"!#!"+xxx[2]/*+"</a>"*/);
+			add_li(list, "<a href='#'>"+xxx[0]+"!#!"+xxx[1]+"!#!"+xxx[2]+"</a>");
 		}
 	}
 	//löscht die aktuelle Liste
