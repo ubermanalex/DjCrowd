@@ -104,6 +104,7 @@
 						add_li('songlist', '<data-role="list-divider" role="heading"> Crowdlist');
 						if (nichtleer){
 							load_list('songlist',splitdata);}
+						$('#content').appendTo('.ui-page').trigger('create');	
 						});
 						break;
 					default:
