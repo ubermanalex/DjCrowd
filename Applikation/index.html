@@ -93,11 +93,26 @@
 						neuePunkte(data);
 						break;
 					case "ACTVOTE":
-						neueVotes(data);
+						switch(data){
+							case "3":
+								document.getElementById('votes').src="votes3.png";
+								break;
+							case "2":
+								document.getElementById('votes').src="votes2.png";
+								break;
+							case "1":
+								document.getElementById('votes').src="votes1.png";
+								break;
+							case "0":
+								document.getElementById('votes').src="votes0.png";
+								break;
+						}
+						//neueVotes(data);
 						break;
 					case "ACTVOT3":
 						alert("Du hast jetzt wieder 3 Votes zu verfügung.");
-						neueVotes(data);
+						document.getElementById('votes').src="votes3.png";
+						//neueVotes(data);
 					case "SONGDB1":
 						$("#content").load("home.html", function(){
 						var nichtleer = data;
@@ -117,10 +132,12 @@
 		
 		//lädt beim wechseln der Seite die Initalen Werte für die Votes, Punkte und Vorschläge
 		function loadhome(){
-		
-			newVote(3);
+			
+			document.getElementById('votes').src="votes3.png";
+			document.getElementById('suggests').src="suggests2.png";
+			//newVote(3);
 			newPunkte(0);
-			newSuggests(2);
+			//newSuggests(2);
 		}
 		//Sendet den Usernamen und prüft, ob der User einen Usernamen gesetzt hat
 		function senduser(username) {
@@ -180,6 +197,8 @@
 		
 		<!-- die Texte für Votes, Punkte und Suggestions. Am Anfang sind sie unsichtbar-->
 		<img src="" id="votes">
+		<img src="" id="suggests">
+		
 		<h3 id="suggestionablesongs" style="float:left">  </h3>
 
 		<h3 id="votecounter" style="float:left"></h3>
