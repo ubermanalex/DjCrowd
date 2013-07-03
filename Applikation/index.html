@@ -5,9 +5,9 @@
 	<meta author="Gruppe 1"/>
 	<title>DjCrowd</title>
 	<!--<link href="style.css" type="text/css" rel="stylesheet"> -->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
-	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+	<link rel="stylesheet" href="jquery.mobile-1.2.1.min.css" />
+	<script src="jquery-1.8.3.min.js"></script>
+	<script src="jquery.mobile-1.2.1.min.js"></script>
 	<script type="text/javascript" src="utility.js"></script>
 	<link href="style.css" type="text/css" rel="stylesheet">
 	<meta name="viewpoint" content="width=device-width,initial-scale=1,maximum-scale=1"/>
@@ -189,17 +189,13 @@
 				<input name="" id="usernameinput" placeholder="Hier Nutzernamen eingeben"
 				value="" type="text" onkeyup="check(usernameinput.value,12,usernameinput);">
 			</div>
-			<input id="ServerButton" value="Get the Party started !" type="submit" onclick="senduser(usernameinput.value)">
+			<input id="ServerButton" value="Get the Party started !" type="submit" onclick="senduser(usernameinput.value)" data-theme="e">
 
 		</div>
 
-		<div id="chat">
+		<!--<div id="chat">
 
-		</div>
-		<!-- erstellt den Footer-->
-		<footer data-theme="a" data-role="footer" data-position="fixed">
-			<h3>Dj Crowd</h3>
-		</footer>
+		</div>-->
 	</div>
 </body>
 </html>
