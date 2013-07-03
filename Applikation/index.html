@@ -73,11 +73,13 @@
 						break;
 					case "SONGBLO":
 						alert("Du wurdest wegen deinem Vorschlag\n" + data + "\ngesperrt!");
-						newSuggests(0);
+						//newSuggests(0);
+						document.getElementById('suggests').src="suggests0.png";
 						break;
 					case "USERBLC":
 						alert("Du wurdest vom DJ gesperrt!");
-						newSuggests(0);
+						//newSuggests(0);
+						document.getElementById('suggests').src="suggests0.png";
 						break;
 					case "POINTGR":
 						alert("Glückwunsch!\nDu hast\n"+data+" Punkte erhalten!");
@@ -87,7 +89,20 @@
 						document.getElementById('headeruser').innerHTML = data;
 						break;
 					case "ACTSUGG":
-						newSuggests(data);
+						switch(data){
+							case "2":
+								document.getElementById('suggests').src="suggests2.png";
+								break;
+							case "1":
+								document.getElementById('suggests').src="suggests1.png";
+								break;
+							case "0":
+								document.getElementById('suggests').src="suggests0.png";
+								break;
+							default:
+								break;
+						}
+						//newSuggests(data);
 						break;
 					case "POINTCO":
 						neuePunkte(data);
@@ -106,6 +121,8 @@
 							case "0":
 								document.getElementById('votes').src="votes0.png";
 								break;
+							default:
+								break;
 						}
 						//neueVotes(data);
 						break;
@@ -113,7 +130,10 @@
 						alert("Du hast jetzt wieder 3 Votes zu verfügung.");
 						document.getElementById('votes').src="votes3.png";
 						//neueVotes(data);
+						break;
 					case "SONGDB1":
+						if (document.getElementById('headeruser').innerHTML == 'DjCrowd')
+							return 0; 
 						$("#content").load("home.html", function(){
 						var nichtleer = data;
 						splitdata = data.split('!#!');

@@ -32,3 +32,13 @@ position:fixed;
 top: 63%;
 left:22.5%;
 }
+
+#votes{
+	position:fixed;
+	left: 5px;
+}
+
+#suggests{
+	position:fixed;
+	left: 75%;
+}
