@@ -580,17 +580,17 @@
 	color: #333
 }
 .ui-btn-down-e {
-	border: 1px solid #f2c43d;
+	border: 1.5px solid #535988;
 	background: #fceda7;
 	font-weight: bold;
 	color: #111;
-	text-shadow: 0 1px 0 #fff;
-	background-image: -webkit-gradient(linear,left top,left bottom,from( #f8d94c ),to( #fadb4e ));
-	background-image: -webkit-linear-gradient( #f8d94c,#fadb4e );
-	background-image: -moz-linear-gradient( #f8d94c,#fadb4e );
-	background-image: -ms-linear-gradient( #f8d94c,#fadb4e );
-	background-image: -o-linear-gradient( #f8d94c,#fadb4e );
-	background-image: linear-gradient( #f8d94c,#fadb4e )
+	text-shadow: 0 0px 0 #fff;
+	background-image: -webkit-gradient(linear,left top,left bottom,from( #8E94C8 ),to( #3d4163 ));
+	background-image: -webkit-linear-gradient( #8E94C8,#3d4163 );
+	background-image: -moz-linear-gradient( #8E94C8,#3d4163 );
+	background-image: -ms-linear-gradient( #8E94C8,#3d4163 );
+	background-image: -o-linear-gradient( #8E94C8,#3d4163 );
+	background-image: linear-gradient( #8E94C8,#3d4163 )
 }
 .ui-btn-down-e:visited, .ui-btn-down-e:hover, .ui-btn-down-e a.ui-link-inherit {
 	color: #333
@@ -750,8 +750,8 @@ a.ui-link-inherit {
 .ui-icon-arrow-d {
 	background-position: -216px 50%
 }
-.ui-icon-check {
-	background-position: -252px 50%
+.ui-icon-check {/*-252px*/
+	background-position: -225px 50%
 }
 .ui-icon-gear {
 	background-position: -288px 50%

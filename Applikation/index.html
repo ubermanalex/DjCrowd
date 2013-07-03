@@ -16,8 +16,8 @@
 		
 		//Initalisiert das Websocket
 		var sock = null;
-		//var wsuri = "ws://localhost:9034";
-		var wsuri = "ws://192.168.178.20:9034";
+		var wsuri = "ws://localhost:9034";
+		//var wsuri = "ws://192.168.178.20:9034";
 		window.onload = function() {
 			
 			sock = new WebSocket(wsuri);
@@ -105,7 +105,39 @@
 						//newSuggests(data);
 						break;
 					case "POINTCO":
-						neuePunkte(data);
+						switch(data.length){
+							case 1:
+								document.getElementById('single').src="number"+data+".png";
+								document.getElementById('double').src="number0.png";
+								document.getElementById('triple').src="number0.png";
+								document.getElementById('quadriple').src="number0.png";
+								break;
+							case 2:
+								document.getElementById('single').src="number"+data[1]+".png";
+								document.getElementById('double').src="number"+data[0]+".png";
+								document.getElementById('triple').src="number0.png";
+								document.getElementById('quadriple').src="number0.png";
+								break;
+							case 3:
+								document.getElementById('single').src="number"+data[2]+".png";
+								document.getElementById('double').src="number"+data[1]+".png";
+								document.getElementById('triple').src="number"+data[0]+".png";
+								document.getElementById('quadriple').src="number0.png";
+								break;
+							case 4:
+								document.getElementById('single').src="number"+data[3]+".png";
+								document.getElementById('double').src="number"+data[2]+".png";
+								document.getElementById('triple').src="number"+data[1]+".png";
+								document.getElementById('quadriple').src="number"+data[0]+".png";
+								break;
+							default:
+								document.getElementById('single').src="number9.png";
+								document.getElementById('double').src="number9.png";
+								document.getElementById('triple').src="number9.png";
+								document.getElementById('quadriple').src="number9.png";
+								break;
+						}
+						//neuePunkte(data);
 						break;
 					case "ACTVOTE":
 						switch(data){
@@ -155,8 +187,14 @@
 			
 			document.getElementById('votes').src="votes3.png";
 			document.getElementById('suggests').src="suggests2.png";
+			document.getElementById('points').src="punkte.png";
+			document.getElementById('single').src="number0.png";
+			document.getElementById('double').src="number0.png";
+			document.getElementById('triple').src="number0.png";
+			document.getElementById('quadriple').src="number0.png";
+			
 			//newVote(3);
-			newPunkte(0);
+			//newPunkte(0);
 			//newSuggests(2);
 		}
 		//Sendet den Usernamen und prüft, ob der User einen Usernamen gesetzt hat
@@ -218,12 +256,17 @@
 		<!-- die Texte für Votes, Punkte und Suggestions. Am Anfang sind sie unsichtbar-->
 		<img src="" id="votes">
 		<img src="" id="suggests">
+		<img src="" id="points">
+		<img src="" id="quadriple">
+		<img src="" id="triple">
+		<img src="" id="double">
+		<img src="" id="single">
 		
-		<h3 id="suggestionablesongs" style="float:left">  </h3>
+		<!--<h3 id="suggestionablesongs" style="float:left">  </h3>
 
 		<h3 id="votecounter" style="float:left"></h3>
 
-		<h3 id="points" ></h3>
+		<h3 id="points" ></h3>-->
 		<!-- Html Teil, der den Nutzer begrüßt und das Eingabefeld erstellt-->
 		<div id="content">
 			<h2> Willkommen bei
