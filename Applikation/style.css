@@ -6,14 +6,21 @@ left: 0;
 right: 0;
 }
 
-#Eingabe {
-text-align: center;
-position: fixed;
-top: 30%;
-left: 0;
-right: 0;}
+h4{
+position:fixed;
+top:22.5%;
+left:8%;
+}
 
-#ServerButton {
-position: fixed !important;
-top: 80% !important;
+#usernameinput{
+width:65%;
+position:fixed;
+top:25%;
+left:17.5%;
+}
+#Button{
+width:74% !important;
+left: 8%;
+position:fixed;
+top:35%;
 }
