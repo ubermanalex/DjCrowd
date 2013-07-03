@@ -11,6 +11,7 @@
 	<script type="text/javascript" src="utility.js"></script>
 	<link href="style.css" type="text/css" rel="stylesheet">
 	<meta name="viewpoint" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+	
 	<script>
 		
 		//Initalisiert das Websocket
@@ -18,7 +19,7 @@
 		var wsuri = "ws://localhost:9034";
 		//var wsuri = "ws://134.96.173.11:9034";
 		window.onload = function() {
-
+			
 			sock = new WebSocket(wsuri);
 
 			sock.onopen = function() {
@@ -27,12 +28,12 @@
 
 			sock.onclose = function(e) {
 				console.log("connection closed (" + e.code + ")");
-				document.getElementById('chat').innerHTML += '<br>connection closed (' + e.code + ')';
+				//document.getElementById('chat').innerHTML += '<br>connection closed (' + e.code + ')';
 			}
 			//reagiert auf Narichten des Servers und führt die entsprechenden Funktionen aus
 			sock.onmessage = function(e) {
 				console.log("message received: " + e.data);
-				document.getElementById('chat').innerHTML += '<br>' + e.data;
+				//document.getElementById('chat').innerHTML += '<br>' + e.data;
 				prefix = e.data.substr(0, 7);
 				data = e.data.substring(7, e.data.length);
 				switch (prefix) {
@@ -164,15 +165,19 @@
 	</script>
 </head>
 
-<body>
-
-	<div data-role="page" id="index">
-		<!-- erstellt den Header am Anfang-->
-		<header>
+<body id="body2">
+	<header>
 			<div data-theme="a" data-role="header" id="header">
 				<h3 id="headeruser"> DjCrowd </h3>
 			</div>
-		</header>
+	</header>
+	
+	<div id="body">
+	
+	
+	<div id="index">
+		<!-- erstellt den Header am Anfang-->
+		
 		<!-- die Texte für Votes, Punkte und Suggestions. Am Anfang sind sie unsichtbar-->
 		<h3 id="suggestionablesongs" style="float:left">  </h3>
 
@@ -180,34 +185,27 @@
 
 		<h3 id="points" ></h3>
 		<!-- Html Teil, der den Nutzer begrüßt und das Eingabefeld erstellt-->
-		<div data-role="content" id="content">
+		<div id="content">
 			<h2> Willkommen bei
 			<br>
 			DjCrowd </h2>
-			<div id ="Eingabe" data-role="fieldcontain">
-				<h4 id="Label"> Nutzername </h4>
-				<input name="" id="usernameinput" placeholder="Hier Nutzernamen eingeben"
+			<div id ="Eingabe">
+				<h4 id="Label"> Nutzername:</h4>
+				<input name="" id="usernameinput" placeholder="Who's partying?"
 				value="" type="text" onkeyup="check(usernameinput.value,12,usernameinput);">
 			</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-			<input id="ServerButton" value="Get the Party started !" type="submit" onclick="senduser(usernameinput.value)" data-theme="e">
 
-=======
 			<div id="Button">
-			<input id="ServerButton" value="Get the Party started !" type="submit" onclick="senduser(usernameinput.value)">
+				
+			<input id="ServerButton" value="Get the Party started !" type="submit" onclick="senduser(usernameinput.value)" data-theme="e">
 			</div>
->>>>>>> 7750cbd1a7ff0def5c8a6c38a8e00bfb7a3310be
-=======
-			<div id="Button">
-			<input id="ServerButton" value="Get the Party started !" type="submit" onclick="senduser(usernameinput.value)">
-			</div>
->>>>>>> 7750cbd1a7ff0def5c8a6c38a8e00bfb7a3310be
+			
 		</div>
 
 		<!--<div id="chat">
 
 		</div>-->
 	</div>
+</div>
 </body>
 </html>

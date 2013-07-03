@@ -152,7 +152,7 @@
 	color: #ddf0f8
 }
 .ui-body-b, .ui-overlay-b {
-	border: 1px solid #999;
+	border: 100px solid #999;
 	background: #f3f3f3;
 	color: #222;
 	text-shadow: 0 1px 0 #fff;
@@ -288,7 +288,7 @@
 	border-width: 0
 }
 .ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {
-	font-family: Helvetica, Arial, sans-serif
+	font-family: Helvetica, Arial, sans-serif	/*TODO:SCHRIFTARTEN FORMULARFELD*/
 }
 .ui-body-c .ui-link-inherit {
 	color: #333

@@ -1,26 +1,26 @@
 h2{
 text-align: center;
 position: fixed;
-top: 10%;
+top: 13%;
 left: 0;
 right: 0;
 }
 
 h4{
 position:fixed;
-top:22.5%;
-left:8%;
+top:39%;
+left:13%;
 }
 
 #usernameinput{
-width:65%;
+width:75%;
 position:fixed;
-top:25%;
-left:17.5%;
+top:47%;
+left:12.5%;
 }
 #Button{
-width:74% !important;
-left: 8%;
+width:70% !important;
+left: 15%;
 position:fixed;
-top:35%;
+top:71%;
 }
