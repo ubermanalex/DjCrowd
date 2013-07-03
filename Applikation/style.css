@@ -6,29 +6,17 @@ left: 0;
 right: 0;
 }
 
-/*
-#ServerButton {
-position: fixed !important;
-top: 80% !important;
-left: 0;
-right: 0;
+h4{
+position:fixed;
+top:22.5%;
+left:8%;
 }
 
-hmtl{
-background-color:blue;
-}
-
-#content{
-text-align:center;
-position: fixed;
-top: 20%;
-left: 0;
-right: 0;}*/
 #usernameinput{
-width:80%;
+width:65%;
 position:fixed;
 top:25%;
-left:10%;
+left:17.5%;
 }
 #Button{
 width:65% !important;
