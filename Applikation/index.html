@@ -16,18 +16,25 @@
 		
 		//Initalisiert das Websocket
 		var sock = null;
+		var connected = false;
+		var x = 0;
 		//var wsuri = "ws://localhost:9034";
 		var wsuri = "ws://192.168.178.20:9034";
 		window.onload = function() {
+			isconnected();
 			
 			sock = new WebSocket(wsuri);
 
 			sock.onopen = function() {
 				console.log("connected to " + wsuri);
+				connected = true;
 			}
 
 			sock.onclose = function(e) {
 				console.log("connection closed (" + e.code + ")");
+				connected = false;
+				alert("Die Verbindung zum Server ist verloren gegangen.");
+				connectedTimeout();
 				//document.getElementById('chat').innerHTML += '<br>connection closed (' + e.code + ')';
 			}
 			//reagiert auf Narichten des Servers und führt die entsprechenden Funktionen aus
@@ -40,9 +47,11 @@
 					case "NAMUSED":
 						alert("Nutzername bereits vergeben!");
 						usernameinput.value = "";
+						connected = true;
 						break;
 					case "NAMFREE":
 						loadhome();
+						connected = true;
 						break;
 					case "SONGIND":
 						alert("Dein Vorschlag\n" + data + "\nist bereits\nin der Crowdlist!");
@@ -143,12 +152,25 @@
 							load_list('songlist',splitdata);}
 						$('#content').appendTo('.ui-page').trigger('create');	
 						});
+						connected = true;
 						break;
 					default:
 						break;
 				}
 			}
 		};
+		function isconnected(){
+			window.setInterval("connectedTimeout()", 5000);
+		}
+		
+		function connectedTimeout(){
+			
+			if (connected == false){
+				alert("Es wird versucht eine Verbindung zum Server herzustellen.");
+				window.location.href="index.html";
+			}
+
+		}
 		
 		//lädt beim wechseln der Seite die Initalen Werte für die Votes, Punkte und Vorschläge
 		function loadhome(){
@@ -166,10 +188,14 @@
 			if (username == "") {
 				alert("Bitte einen Nutzernamen eingeben.");
 			} else {
-				sock.send('USERNAME: ' + username);
+				if (connected == false){
+					alert("Es konnte keine Verbindung zum Server hergestellt werden.");
+				}
+				else sock.send('USERNAME: ' + username);
 			}
 
 		}
+		
 		//verarbeitet die aktuelle Anzahl an Vorschlägen, die vom Server übergeben werden
 		function newSuggests(data){
 			newsuggestions = data;
