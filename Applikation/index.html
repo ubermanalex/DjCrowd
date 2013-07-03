@@ -4,11 +4,12 @@
 	<meta charset="utf-8"/>
 	<meta author="Gruppe 1"/>
 	<title>DjCrowd</title>
-	<link href="style.css" type="text/css" rel="stylesheet">
+	<!--<link href="style.css" type="text/css" rel="stylesheet"> -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
 	<script type="text/javascript" src="utility.js"></script>
+	<link href="style.css" type="text/css" rel="stylesheet">
 	<meta name="viewpoint" content="width=device-width,initial-scale=1,maximum-scale=1"/>
 	<script>
 		
@@ -183,12 +184,12 @@
 			<h2> Willkommen bei
 			<br>
 			DjCrowd </h2>
-			<div data-role="fieldcontain">
+			<div id ="Eingabe" data-role="fieldcontain">
 				<label for="usernameinput" id="tests"> Nutzername </label>
 				<input name="" id="usernameinput" placeholder="Hier Nutzernamen eingeben"
 				value="" type="text" onkeyup="check(usernameinput.value,12,usernameinput);">
 			</div>
-			<input value="Get the Party started !" type="submit" onclick="senduser(usernameinput.value)">
+			<input id="ServerButton" value="Get the Party started !" type="submit" onclick="senduser(usernameinput.value)">
 
 		</div>
 

@@ -1,1 +1,19 @@
-h2{text-align:center;}
+h2{
+text-align: center;
+position: fixed;
+top: 10%;
+left: 0;
+right: 0;
+}
+
+#Eingabe {
+text-align: center;
+position: fixed;
+top: 30%;
+left: 0;
+right: 0;}
+
+#ServerButton {
+position: fixed !important;
+top: 80% !important;
+}
