@@ -35,13 +35,14 @@ left:22.5%;
 
 #votes{
 	position:fixed;
-	left: 42%;
+	left: 50%;
+	margin-left:-32px;
 	top: 11%;
 }
 
 #suggests{
 	position:fixed;
-	left: 0px;
+	left: 10px;
 	top: 11%;
 }
 
