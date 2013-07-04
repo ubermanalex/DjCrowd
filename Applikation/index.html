@@ -5,11 +5,11 @@
 	<meta author="Gruppe 1"/>
 	<title>DjCrowd</title>
 	<!--<link href="style.css" type="text/css" rel="stylesheet"> -->
-	<link rel="stylesheet" href="jquery.mobile-1.2.1.min.css" />
-	<script src="jquery-1.8.3.min.js"></script>
-	<script src="jquery.mobile-1.2.1.min.js"></script>
-	<script type="text/javascript" src="utility.js"></script>
-	<link href="style.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery.mobile-1.2.1.min.css" />
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.mobile-1.2.1.min.js"></script>
+	<script type="text/javascript" src="js/utility.js"></script>
+	<link href="css/style.css" type="text/css" rel="stylesheet">
 	<meta name="viewpoint" content="width=device-width,initial-scale=1,maximum-scale=1"/>
 	
 	<script>
@@ -86,12 +86,12 @@
 					case "SONGBLO":
 						alert("Du wurdest wegen deinem Vorschlag\n" + data + "\ngesperrt!");
 						//newSuggests(0);
-						document.getElementById('suggests').src="suggests0.png";
+						document.getElementById('suggests').src="images/suggests0.png";
 						break;
 					case "USERBLC":
 						alert("Du wurdest vom DJ gesperrt!");
 						//newSuggests(0);
-						document.getElementById('suggests').src="suggests0.png";
+						document.getElementById('suggests').src="images/suggests0.png";
 						break;
 					case "POINTGR":
 						alert("Glückwunsch!\nDu hast\n"+data+" Punkte erhalten!");
@@ -103,13 +103,13 @@
 					case "ACTSUGG":
 						switch(data){
 							case "2":
-								document.getElementById('suggests').src="suggests2.png";
+								document.getElementById('suggests').src="images/suggests2.png";
 								break;
 							case "1":
-								document.getElementById('suggests').src="suggests1.png";
+								document.getElementById('suggests').src="images/suggests1.png";
 								break;
 							case "0":
-								document.getElementById('suggests').src="suggests0.png";
+								document.getElementById('suggests').src="images/suggests0.png";
 								break;
 							default:
 								break;
@@ -117,53 +117,61 @@
 						//newSuggests(data);
 						break;
 					case "POINTCO":
+						if (data[0] == "-"){
+							document.getElementById('single').src="images/number0.png";
+							document.getElementById('double').src="images/number0.png";
+							document.getElementById('triple').src="images/number0.png";
+							document.getElementById('quadriple').src="images/number0.png";	
+						}
+						else{
 						switch(data.length){
 							case 1:
-								document.getElementById('single').src="number"+data+".png";
-								document.getElementById('double').src="number0.png";
-								document.getElementById('triple').src="number0.png";
-								document.getElementById('quadriple').src="number0.png";
+								document.getElementById('single').src="images/number"+data+".png";
+								document.getElementById('double').src="images/number0.png";
+								document.getElementById('triple').src="images/number0.png";
+								document.getElementById('quadriple').src="images/number0.png";
 								break;
 							case 2:
-								document.getElementById('single').src="number"+data[1]+".png";
-								document.getElementById('double').src="number"+data[0]+".png";
-								document.getElementById('triple').src="number0.png";
-								document.getElementById('quadriple').src="number0.png";
+								document.getElementById('single').src="images/number"+data[1]+".png";
+								document.getElementById('double').src="images/number"+data[0]+".png";
+								document.getElementById('triple').src="images/number0.png";
+								document.getElementById('quadriple').src="images/number0.png";
 								break;
 							case 3:
-								document.getElementById('single').src="number"+data[2]+".png";
-								document.getElementById('double').src="number"+data[1]+".png";
-								document.getElementById('triple').src="number"+data[0]+".png";
-								document.getElementById('quadriple').src="number0.png";
+								document.getElementById('single').src="images/number"+data[2]+".png";
+								document.getElementById('double').src="images/number"+data[1]+".png";
+								document.getElementById('triple').src="images/number"+data[0]+".png";
+								document.getElementById('quadriple').src="images/number0.png";
 								break;
 							case 4:
-								document.getElementById('single').src="number"+data[3]+".png";
-								document.getElementById('double').src="number"+data[2]+".png";
-								document.getElementById('triple').src="number"+data[1]+".png";
-								document.getElementById('quadriple').src="number"+data[0]+".png";
+								document.getElementById('single').src="images/number"+data[3]+".png";
+								document.getElementById('double').src="images/number"+data[2]+".png";
+								document.getElementById('triple').src="images/number"+data[1]+".png";
+								document.getElementById('quadriple').src="images/number"+data[0]+".png";
 								break;
 							default:
-								document.getElementById('single').src="number9.png";
-								document.getElementById('double').src="number9.png";
-								document.getElementById('triple').src="number9.png";
-								document.getElementById('quadriple').src="number9.png";
+								document.getElementById('single').src="images/number9.png";
+								document.getElementById('double').src="images/number9.png";
+								document.getElementById('triple').src="images/number9.png";
+								document.getElementById('quadriple').src="images/number9.png";
 								break;
+							}
 						}
 						//neuePunkte(data);
 						break;
 					case "ACTVOTE":
 						switch(data){
 							case "3":
-								document.getElementById('votes').src="votes3.png";
+								document.getElementById('votes').src="images/votes3.png";
 								break;
 							case "2":
-								document.getElementById('votes').src="votes2.png";
+								document.getElementById('votes').src="images/votes2.png";
 								break;
 							case "1":
-								document.getElementById('votes').src="votes1.png";
+								document.getElementById('votes').src="images/votes1.png";
 								break;
 							case "0":
-								document.getElementById('votes').src="votes0.png";
+								document.getElementById('votes').src="images/votes0.png";
 								break;
 							default:
 								break;
@@ -172,7 +180,7 @@
 						break;
 					case "ACTVOT3":
 						alert("Du hast jetzt wieder 3 Votes zu verfügung.");
-						document.getElementById('votes').src="votes3.png";
+						document.getElementById('votes').src="images/votes3.png";
 						//neueVotes(data);
 						break;
 					case "SONGDB1":
@@ -210,13 +218,13 @@
 		//lädt beim wechseln der Seite die Initalen Werte für die Votes, Punkte und Vorschläge
 		function loadhome(){
 			
-			document.getElementById('votes').src="votes3.png";
-			document.getElementById('suggests').src="suggests2.png";
-			document.getElementById('points').src="punkte.png";
-			document.getElementById('single').src="number0.png";
-			document.getElementById('double').src="number0.png";
-			document.getElementById('triple').src="number0.png";
-			document.getElementById('quadriple').src="number0.png";
+			document.getElementById('votes').src="images/votes3.png";
+			document.getElementById('suggests').src="images/suggests2.png";
+			document.getElementById('points').src="images/punkte.png";
+			document.getElementById('single').src="images/number0.png";
+			document.getElementById('double').src="images/number0.png";
+			document.getElementById('triple').src="images/number0.png";
+			document.getElementById('quadriple').src="images/number0.png";
 			
 			//newVote(3);
 			//newPunkte(0);
@@ -312,7 +320,7 @@
 			<input id="ServerButton" value="Get the Party started !" type="submit" onclick="senduser(usernameinput.value)" data-theme="e">
 			</div>
 			
-			<img id="Bild" src="logo.png" alt="Logo DJCrowd">
+			<img id="Bild" src="images/logo.png" alt="Logo DJCrowd">
 			
 		</div>
 
