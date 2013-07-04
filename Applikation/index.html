@@ -24,7 +24,7 @@
 		//var wsuri = "ws://localhost:9034";
 		//var wsuri = "ws://192.168.178.31:9034";
 		window.onload = function() {
-			isconnected();
+			//isconnected();
 			
 			sock = new WebSocket(wsuri);
 
@@ -201,7 +201,7 @@
 		function connectedTimeout(){
 			
 			if (connected == false){
-				alert("Es wird versucht eine Verbindung zum Server herzustellen.");
+				//alert("Es wird versucht eine Verbindung zum Server herzustellen.");
 				window.location.href="index.html";
 			}
 
