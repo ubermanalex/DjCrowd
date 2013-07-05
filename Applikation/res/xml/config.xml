@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.djcrowd"
+        id        = "com.phonegap.example"
         versionCode="10" 
         version   = "1.0.0">
 
-	<!--<content src="../../index.html" />-->
+	<content src="../../index.html" />
 	
     <!-- versionCode is optional and Android only -->
-	
+	<plugins>
+	<plugin name="WebSocket" value="com.phonegap.plugins.websocket.WebSocket" />
+    </plugins>
 	<name>CrowdDj</name>
 
     <description>
         A good app for you to hear your favorite music in a disco.
     </description>
-	
-	<gap:plugin name="BarcodeScanner" />
 
     <author href="https://www.dfki.de" email="s9kibuch@stud.uni-saarland">
         CrowdDj
