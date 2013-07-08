@@ -23,34 +23,30 @@
 	song = document.getElementById('headeruser').innerHTML+'##'+interpret+'##'+songtitle;
 	
 	send('SONG: '+interpret+'##'+songtitle+'##'+document.getElementById('headeruser').innerHTML);
-	//insertItem('songlist',1,'<li data-theme="c" onclick="vote('+song+')">'+interpret+" - "+songtitle+'</li>');
 	}
-	//Hängt ein neues Element an die Liste an 
+	//Hängt ein neues Element an die Songliste an, sodass nun dafür gewotet werden kann 
 	function add_li(list, text) {
 		var list = document.getElementById(list);
 		var li = document.createElement("li");
 		var a = text.split('!#!');
 		if (a[1] && a[2]){
 		li.innerHTML = a[0] +" - "+ a[1] + '<span class="ui-li-count">'+ a[2]+ '</span>' ;
-		 //<span class="ui-li-count">
-                      //  jdfe
-                    //</span>
         a[0] = a[0].split(">")[1];
+		//fragt, ob man wirklich für den Song voten möchte
         li.onclick=function(){
         	var answear = confirm("Für  '" +a[0]+" - "+a[1]+ "'  voten?");
+		//wenn ja wird der Vote an den Server wetiergeleitet
 		if (answear){
 			sock.send('VOTE: '+document.getElementById('headeruser').innerHTML+'##'+a[0]+'##'+a[1]);}
 			
         }
         list.appendChild(li);
 		}
-		//}
 		else {	li.innerHTML = a[0];
 				list.appendChild(li);}
 	}
 	//lädt die liste neu
 	function load_list(list, list_array) {
-		//add_li(list, "<data-role="list-divider" role="heading"> Crowdlist>")
 		for (var i = 0; i < list_array.length; i++) {
 			xxx = list_array[i].split('##');
 			x = document.getElementById('headeruser').innerHTML+'##'+xxx[0]+'##'+xxx[1];
@@ -65,28 +61,19 @@
 	list.removeChild( list.lastChild ); } 
 	} 
 
-	//fügt ein neues Element ein	
+	//fügt ein neues Element in die Songliste ein	
 	function insertItem(myid,position,newListItem) {
 	var ul = document.getElementById(myid);
 	var li = document.createElement("li");
 	li.innerHTML=newListItem;
 	ul.insertBefore(li, ul.getElementsByTagName("li")[position]);
 	}
-	
-	//Fragt ab, ob man wirklich für den Song voten will und schickt(wenn ja) dies an den Server
-	function vote(){
-		alert("Hallo.");
-		/*var neuersong = song.split('##');
-		var answear = confirm("Für  '" +neuersong[1]+" - "+neuersong[2]+ "'  voten?");
-		if (answear){
-			sock.send('VOTE: '+song);}*/
-		
-	}
+
 
 </script>
 <!-- Button um einen Song hinzuzufügen-->
-<input value="Song hinzufügen" type="submit" data-role="button" onclick="addsong()" data-theme="e">
-<!-- Crowdliste in der die Lieder zum Voten stehen-->
+<input value="Song vorschlagen" type="submit" data-role="button" onclick="addsong()" data-theme="e">
+<!-- Songliste in der die Lieder zum Voten stehen-->
 <ul id="songlist" data-role="listview" data-divider-theme="b" data-inset="true" data-icon="check">
 	<li data-role="list-divider" role="heading">
 		Crowdlist
